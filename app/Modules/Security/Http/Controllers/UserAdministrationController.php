@@ -18,6 +18,7 @@ use App\Modules\Security\Http\Requests\UpdateUserRequest;
 use App\Modules\Security\Models\Role;
 use App\Modules\Security\Models\User;
 use Illuminate\Http\JsonResponse;
+use Illuminate\View\View;
 use Symfony\Component\HttpFoundation\Response;
 
 final class UserAdministrationController extends Controller {
@@ -28,6 +29,10 @@ final class UserAdministrationController extends Controller {
         private AssignUserRolesAction $assignUserRolesAction,
         private SyncRolePermissionsAction $syncRolePermissionsAction,
     ) {
+    }
+
+    public function manage(): View {
+        return view('security::admin.users.manage');
     }
 
     public function store(StoreUserRequest $request): JsonResponse {

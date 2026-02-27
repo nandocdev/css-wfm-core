@@ -12,12 +12,11 @@ use App\Modules\Security\Actions\SendPasswordResetLinkAction;
 use App\Modules\Security\Http\Requests\ForgotPasswordRequest;
 use App\Modules\Security\Http\Requests\LoginRequest;
 use App\Modules\Security\Http\Requests\ResetPasswordRequest;
-use Illuminate\Http\JsonResponse;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\URL;
 use Illuminate\Support\Facades\Password;
-use Symfony\Component\HttpFoundation\Response;
+use Illuminate\View\View;
 
 final class AuthController extends Controller {
     public function __construct(
@@ -28,8 +27,8 @@ final class AuthController extends Controller {
     ) {
     }
 
-    public function showLoginForm(): JsonResponse {
-        return response()->json(['message' => 'Formulario de inicio de sesión.'], Response::HTTP_OK);
+    public function showLoginForm(): View {
+        return view('security::auth.login');
     }
 
     public function login(LoginRequest $request): RedirectResponse {
@@ -48,8 +47,8 @@ final class AuthController extends Controller {
         return redirect()->to(URL::to('/security/auth/login'));
     }
 
-    public function showForgotPasswordForm(): JsonResponse {
-        return response()->json(['message' => 'Formulario de solicitud de recuperación.'], Response::HTTP_OK);
+    public function showForgotPasswordForm(): View {
+        return view('security::auth.forgot-password');
     }
 
     public function sendResetLink(ForgotPasswordRequest $request): RedirectResponse {
@@ -58,11 +57,11 @@ final class AuthController extends Controller {
         return back()->with('status', __($this->passwordStatusKey(Password::RESET_LINK_SENT)));
     }
 
-    public function showResetForm(string $token, Request $request): JsonResponse {
-        return response()->json([
+    public function showResetForm(string $token, Request $request): View {
+        return view('security::auth.reset-password', [
             'token' => $token,
             'email' => (string) $request->query('email', ''),
-        ], Response::HTTP_OK);
+        ]);
     }
 
     public function resetPassword(ResetPasswordRequest $request): RedirectResponse {

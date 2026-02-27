@@ -27,6 +27,7 @@ Route::middleware(['web'])
         });
 
         Route::middleware(['auth', 'force.password.change'])->prefix('admin')->name('admin.')->group(function (): void {
+            Route::get('/users/manage', [UserAdministrationController::class, 'manage'])->name('users.manage');
             Route::post('/users', [UserAdministrationController::class, 'store'])->name('users.store');
             Route::put('/users/{user}', [UserAdministrationController::class, 'update'])->name('users.update');
             Route::patch('/users/{user}/status', [UserAdministrationController::class, 'toggleStatus'])->name('users.status.toggle');

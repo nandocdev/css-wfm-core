@@ -8,9 +8,8 @@ use App\Http\Controllers\Controller;
 use App\Modules\Security\Actions\ForcePasswordChangeAction;
 use App\Modules\Security\Http\Requests\ForcePasswordChangeRequest;
 use App\Modules\Security\Models\User;
-use Illuminate\Http\JsonResponse;
 use Illuminate\Http\RedirectResponse;
-use Symfony\Component\HttpFoundation\Response;
+use Illuminate\View\View;
 
 final class ForcePasswordChangeController extends Controller {
     public function __construct(
@@ -18,8 +17,8 @@ final class ForcePasswordChangeController extends Controller {
     ) {
     }
 
-    public function show(): JsonResponse {
-        return response()->json(['message' => 'Debe cambiar su contraseña para continuar.'], Response::HTTP_OK);
+    public function show(): View {
+        return view('security::auth.force-password');
     }
 
     public function update(ForcePasswordChangeRequest $request): RedirectResponse {
