@@ -1,91 +1,79 @@
 # Sistema WFM Call Center CSS
 
-Repositorio del **Sistema de Gestión de Horarios (WFM)** para Call Center, construido con **Laravel 12** y orientado a control operativo de horarios, asistencia, permisos, excepciones y jerarquía organizacional.
+Plataforma web para planificar, publicar y controlar la operación de horarios de un Contact Center de forma auditable, con jerarquía organizacional y flujos de aprobación por rol.
 
 ![Laravel](https://img.shields.io/badge/Laravel-12-red)
-![PHP](https://img.shields.io/badge/PHP-8.2%2B-blue)
+![PHP](https://img.shields.io/badge/PHP-8.3-blue)
 ![PostgreSQL](https://img.shields.io/badge/PostgreSQL-16-336791)
-![Estado](https://img.shields.io/badge/Estado-En%20elaboraci%C3%B3n-yellow)
+![Arquitectura](https://img.shields.io/badge/Arquitectura-Monolito%20Modular-6f42c1)
+![Estado](https://img.shields.io/badge/Estado-En%20desarrollo-yellow)
 
-## Tabla de contenido
+---
 
-- [Visión general](#visión-general)
-- [Stack tecnológico](#stack-tecnológico)
-- [Módulos funcionales](#módulos-funcionales)
-- [Documentación](#documentación)
-- [Puesta en marcha local](#puesta-en-marcha-local)
-- [Comandos útiles](#comandos-útiles)
-- [Estructura del repositorio](#estructura-del-repositorio)
-- [Convenciones del proyecto](#convenciones-del-proyecto)
-- [Licencia](#licencia)
+## ¿Qué resuelve este proyecto?
 
-## Visión general
+El sistema WFM centraliza en una sola plataforma:
 
-Este proyecto centraliza:
+- Programación semanal e intradía de turnos.
+- Gestión de permisos, excepciones y cambios de turno.
+- Registro y trazabilidad de asistencia e incidencias.
+- Gestión de usuarios, roles, permisos y alcance jerárquico.
+- Auditoría de acciones críticas para cumplimiento institucional.
 
-- Gestión de empleados, roles y permisos
-- Jerarquía organizacional y alcance por visibilidad
-- Asignación de horarios (individual y por equipo)
-- Registro de asistencia e incidencias
-- Solicitudes de permisos y cambios de turno
-- Auditoría de acciones críticas
+Resultado esperado: mayor cobertura operativa, menor conflicto de horarios y decisiones basadas en información confiable por rol (Operador, Coordinador, Jefe, WFM, Director y Administrador).
 
-El enfoque funcional y de diseño está documentado bajo el ciclo RUP (fase de elaboración) en la carpeta `docs/`.
+---
+
+## Capacidades clave
+
+- Seguridad y acceso: login, logout, recuperación/cambio de contraseña, control por roles y políticas.
+- Gestión de personas: ficha laboral, equipos, estructura organizacional y catálogos.
+- Planificación WFM: turnos base, publicación semanal, actividades intradía y descansos.
+- Workflow operativo: permisos totales/parciales y cambios de turno con aprobación.
+- Monitoreo y reportes: vistas por jerarquía, exportación y seguimiento histórico.
+- Integridad del sistema: reglas intrínsecas, auditoría inmutable y notificaciones.
+
+---
+
+## Arquitectura
+
+El proyecto sigue un enfoque de monolito modular en Laravel:
+
+- Módulos de negocio en `app/Modules/*`.
+- Contratos compartidos en `app/Contracts/*`.
+- Vistas por módulo en `app/Modules/{Modulo}/Resources/views`.
+- Documentación funcional/técnica en [docs/README.md](docs/README.md).
+
+Esta estructura permite escalar por dominio sin perder cohesión del producto.
+
+---
 
 ## Stack tecnológico
 
-- **Backend:** PHP 8.2+, Laravel 12
-- **Frontend:** Blade, Tailwind CSS v4, Alpine.js, Vite
-- **Base de datos:** PostgreSQL 16 (compatible con MySQL/SQLite para desarrollo)
-- **Testing:** Pest + PHPUnit
+- Backend: Laravel 12, PHP 8.3, Eloquent ORM.
+- Frontend: Blade, Tailwind CSS, Alpine.js, Vite.
+- Datos: PostgreSQL 16.
+- Pruebas: Pest + PHPUnit.
 
-## Módulos funcionales
+---
 
-- Seguridad y acceso (usuarios, roles, permisos)
-- Organización (empleados, equipos, cargos, estados laborales)
-- Horarios (plantillas, asignaciones, resolución de horario efectivo)
-- Excepciones y permisos (flujos de aprobación)
-- Asistencia (registro y trazabilidad)
-- Auditoría (eventos críticos del sistema)
+## Inicio rápido
 
-## Documentación
+### Requisitos
 
-Punto de entrada de documentación:
-
-- [docs/README.md](docs/README.md)
-
-Documentos clave del dominio:
-
-- [Visión y casos de uso](docs/00-overview/01_vision.md)
-- [Requisitos del sistema (SRS)](docs/00-overview/02_requisitos.md)
-- [Casos de uso](docs/00-overview/03_casos_uso.md)
-- [Modelo de datos](docs/00-overview/04_model.md)
-- [Esquema SQL de arquitectura](docs/01-architecture/database.sql)
-
-## Puesta en marcha local
-
-### 1) Requisitos
-
-- PHP 8.2+
+- PHP 8.3+
 - Composer
 - Node.js 18+
 - npm
-- PostgreSQL (recomendado) o SQLite/MySQL
+- PostgreSQL 16 (recomendado)
 
-### 2) Instalación
+### Instalación
 
 ```bash
 composer install
 npm install
 cp .env.example .env
 php artisan key:generate
-```
-
-### 3) Configurar base de datos
-
-Edita `.env` y luego ejecuta:
-
-```bash
 php artisan migrate
 ```
 
@@ -96,55 +84,70 @@ php artisan db:seed
 php artisan storage:link
 ```
 
-### 4) Levantar entorno de desarrollo
+### Levantar entorno local
 
 ```bash
 composer run dev
 ```
 
-Esto levanta servidor Laravel, cola, logs y Vite en paralelo.
+---
+
+## Documentación del producto
+
+### Funcional
+
+- [Visión](docs/00-overview/01_vision.md)
+- [Requisitos del sistema (SRS)](docs/00-overview/02_requisitos.md)
+- [Casos de uso](docs/00-overview/03_casos_uso.md)
+- [Modelo de dominio](docs/00-overview/04_model.md)
+
+### Técnica
+
+- [Guía general de documentación](docs/README.md)
+- [Arquitectura de datos SQL](docs/01-architecture/database.sql)
+- [Roadmap del proyecto](ROADMAP.md)
+
+---
+
+## Módulos de alto nivel
+
+- Security & Administration
+- Organization & Corporate
+- Employee & Welfare
+- Schedule Engine / Planning
+- Attendance & Incidents
+- Workflow (Permisos, Excepciones, Cambios de turno)
+- Analytics & Monitoring
+
+---
 
 ## Comandos útiles
 
 ```bash
-# Desarrollo frontend
-npm run dev
-
-# Build de assets
-npm run build
-
-# Ejecutar pruebas
-composer run test
-# o
+# pruebas
 php artisan test
 
-# Limpiar/optimizar (según entorno)
-php artisan config:clear
+# frontend
+npm run dev
+npm run build
+
+# cachés
+php artisan optimize:clear
 php artisan config:cache
 php artisan route:cache
 php artisan view:cache
 ```
 
-## Estructura del repositorio
+---
 
-```text
-app/                # Código de aplicación (dominio, controladores, modelos, etc.)
-config/             # Configuración de Laravel
-database/           # Migraciones, seeders, factories
-docs/               # Documentación funcional y técnica del proyecto
-public/             # Punto de entrada web y assets compilados
-resources/          # Vistas Blade, CSS y JS fuente
-routes/             # Definición de rutas web/console
-tests/              # Pruebas unitarias y feature
-```
+## Estado actual
 
-## Convenciones del proyecto
+- Fase RUP: Elaboración.
+- Cobertura de casos de uso trazada en roadmap funcional.
+- Implementación incremental por sprints y módulos.
 
-- Commits con convención tipo Conventional Commits en español (`feat`, `fix`, `docs`, `refactor`, etc.)
-- Arquitectura orientada a módulos de dominio
-- Policies para autorización + validación de jerarquía organizacional
-- Cambios funcionales deben reflejarse en `docs/`
+---
 
 ## Licencia
 
-Este proyecto se distribuye bajo licencia [MIT](LICENSE).
+Distribuido bajo [MIT](LICENSE).
