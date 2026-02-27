@@ -1,3 +1,8 @@
+# DDL
+
+## Cache
+
+```sql
 CREATE TABLE public."cache" (
     "key" varchar(255) NOT NULL,
     value text NOT NULL,
@@ -7,6 +12,11 @@ CREATE TABLE public."cache" (
 
 CREATE INDEX cache_expiration_index ON public.cache USING btree (expiration);
 
+```
+
+## Cache locks
+
+```sql
 CREATE TABLE public.cache_locks (
     "key" varchar(255) NOT NULL,
     "owner" varchar(255) NOT NULL,
@@ -16,6 +26,11 @@ CREATE TABLE public.cache_locks (
 
 CREATE INDEX cache_locks_expiration_index ON public.cache_locks USING btree (expiration);
 
+```
+
+## Directorates: `directorates`
+
+```sql
 CREATE TABLE public.directorates (
     id bigserial NOT NULL,
     "name" varchar(255) NOT NULL,
@@ -26,6 +41,9 @@ CREATE TABLE public.directorates (
     CONSTRAINT directorates_pkey PRIMARY KEY (id)
 );
 
+```
+
+```sql
 CREATE TABLE public.disability_types (
     id bigserial NOT NULL,
     "name" varchar(255) NOT NULL,
@@ -36,6 +54,9 @@ CREATE TABLE public.disability_types (
     CONSTRAINT disability_types_pkey PRIMARY KEY (id)
 );
 
+```
+
+```sql
 CREATE TABLE public.disease_types (
     id bigserial NOT NULL,
     "name" varchar(255) NOT NULL,
@@ -46,6 +67,9 @@ CREATE TABLE public.disease_types (
     CONSTRAINT disease_types_pkey PRIMARY KEY (id)
 );
 
+```
+
+```sql
 CREATE TABLE public.employment_statuses (
     id bigserial NOT NULL,
     "name" varchar(255) NOT NULL,
@@ -58,6 +82,9 @@ CREATE TABLE public.employment_statuses (
     CONSTRAINT employment_statuses_pkey PRIMARY KEY (id)
 );
 
+```
+
+```sql
 CREATE TABLE public.failed_jobs (
     id bigserial NOT NULL,
     "uuid" varchar(255) NOT NULL,
@@ -70,6 +97,9 @@ CREATE TABLE public.failed_jobs (
     CONSTRAINT failed_jobs_uuid_unique UNIQUE (uuid)
 );
 
+```
+
+```sql
 CREATE TABLE public.incident_types (
     id bigserial NOT NULL,
     code varchar(20) NOT NULL,
@@ -93,6 +123,9 @@ CREATE TABLE public.incident_types (
     CONSTRAINT incident_types_pkey PRIMARY KEY (id)
 );
 
+```
+
+```sql
 CREATE TABLE public.job_batches (
     id varchar(255) NOT NULL,
     "name" varchar(255) NOT NULL,
@@ -107,6 +140,9 @@ CREATE TABLE public.job_batches (
     CONSTRAINT job_batches_pkey PRIMARY KEY (id)
 );
 
+```
+
+```sql
 CREATE TABLE public.jobs (
     id bigserial NOT NULL,
     queue varchar(255) NOT NULL,
@@ -120,6 +156,9 @@ CREATE TABLE public.jobs (
 
 CREATE INDEX jobs_queue_index ON public.jobs USING btree (queue);
 
+```
+
+```sql
 CREATE TABLE public.migrations (
     id serial4 NOT NULL,
     migration varchar(255) NOT NULL,
@@ -127,6 +166,9 @@ CREATE TABLE public.migrations (
     CONSTRAINT migrations_pkey PRIMARY KEY (id)
 );
 
+```
+
+```sql
 CREATE TABLE public.notifications (
     id uuid NOT NULL,
     "type" varchar(255) NOT NULL,
@@ -141,6 +183,9 @@ CREATE TABLE public.notifications (
 
 CREATE INDEX notifications_notifiable_type_notifiable_id_index ON public.notifications USING btree (notifiable_type, notifiable_id);
 
+```
+
+```sql
 CREATE TABLE public.password_reset_tokens (
     email varchar(255) NOT NULL,
     "token" varchar(255) NOT NULL,
@@ -148,6 +193,9 @@ CREATE TABLE public.password_reset_tokens (
     CONSTRAINT password_reset_tokens_pkey PRIMARY KEY (email)
 );
 
+```
+
+```sql
 CREATE TABLE public.permissions (
     id bigserial NOT NULL,
     "name" varchar(255) NOT NULL,
@@ -158,6 +206,9 @@ CREATE TABLE public.permissions (
     CONSTRAINT permissions_pkey PRIMARY KEY (id)
 );
 
+```
+
+```sql
 CREATE TABLE public.provinces (
     id bigserial NOT NULL,
     "name" varchar(255) NOT NULL,
@@ -167,6 +218,9 @@ CREATE TABLE public.provinces (
     CONSTRAINT provinces_pkey PRIMARY KEY (id)
 );
 
+```
+
+```sql
 CREATE TABLE public.roles (
     id bigserial NOT NULL,
     "name" varchar(255) NOT NULL,
@@ -179,6 +233,9 @@ CREATE TABLE public.roles (
     CONSTRAINT roles_pkey PRIMARY KEY (id)
 );
 
+```
+
+```sql
 CREATE TABLE public.schedules (
     id bigserial NOT NULL,
     "name" varchar(255) NOT NULL,
@@ -194,6 +251,9 @@ CREATE TABLE public.schedules (
     CONSTRAINT schedules_pkey PRIMARY KEY (id)
 );
 
+```
+
+```sql
 CREATE TABLE public.sessions (
     id varchar(255) NOT NULL,
     user_id int8 NULL,
@@ -208,6 +268,9 @@ CREATE INDEX sessions_last_activity_index ON public.sessions USING btree (last_a
 
 CREATE INDEX sessions_user_id_index ON public.sessions USING btree (user_id);
 
+```
+
+```sql
 CREATE TABLE public.teams (
     id bigserial NOT NULL,
     "name" varchar(255) NOT NULL,
@@ -219,6 +282,9 @@ CREATE TABLE public.teams (
     CONSTRAINT teams_pkey PRIMARY KEY (id)
 );
 
+```
+
+```sql
 CREATE TABLE public.users (
     id bigserial NOT NULL,
     "name" varchar(255) NOT NULL,
@@ -236,6 +302,9 @@ CREATE TABLE public.users (
     CONSTRAINT users_pkey PRIMARY KEY (id)
 );
 
+```
+
+```sql
 CREATE TABLE public.audit_logs (
     id bigserial NOT NULL,
     user_id int8 NULL,
@@ -258,6 +327,9 @@ CREATE INDEX audit_logs_entity_type_entity_id_index ON public.audit_logs USING b
 
 CREATE INDEX audit_logs_user_id_index ON public.audit_logs USING btree (user_id);
 
+```
+
+```sql
 CREATE TABLE public.break_templates (
     id bigserial NOT NULL,
     "name" varchar(255) NOT NULL,
@@ -274,6 +346,9 @@ CREATE TABLE public.break_templates (
     CONSTRAINT break_templates_team_id_foreign FOREIGN KEY (team_id) REFERENCES public.teams(id) ON DELETE CASCADE
 );
 
+```
+
+```sql
 CREATE TABLE public.departments (
     id bigserial NOT NULL,
     "name" varchar(255) NOT NULL,
@@ -286,6 +361,9 @@ CREATE TABLE public.departments (
     CONSTRAINT departments_directorate_id_foreign FOREIGN KEY (directorate_id) REFERENCES public.directorates(id) ON DELETE CASCADE
 );
 
+```
+
+```sql
 CREATE TABLE public.districts (
     id bigserial NOT NULL,
     "name" varchar(255) NOT NULL,
@@ -297,6 +375,9 @@ CREATE TABLE public.districts (
     CONSTRAINT districts_province_id_foreign FOREIGN KEY (province_id) REFERENCES public.provinces(id) ON DELETE CASCADE
 );
 
+```
+
+```sql
 CREATE TABLE public.model_has_permissions (
     permission_id int8 NOT NULL,
     model_type varchar(255) NOT NULL,
@@ -307,6 +388,9 @@ CREATE TABLE public.model_has_permissions (
 
 CREATE INDEX model_has_permissions_model_id_model_type_index ON public.model_has_permissions USING btree (model_id, model_type);
 
+```
+
+```sql
 CREATE TABLE public.model_has_roles (
     role_id int8 NOT NULL,
     model_type varchar(255) NOT NULL,
@@ -317,6 +401,9 @@ CREATE TABLE public.model_has_roles (
 
 CREATE INDEX model_has_roles_model_id_model_type_index ON public.model_has_roles USING btree (model_id, model_type);
 
+```
+
+```sql
 CREATE TABLE public.positions (
     id bigserial NOT NULL,
     title varchar(255) NOT NULL,
@@ -330,6 +417,9 @@ CREATE TABLE public.positions (
     CONSTRAINT positions_department_id_foreign FOREIGN KEY (department_id) REFERENCES public.departments(id) ON DELETE CASCADE
 );
 
+```
+
+```sql
 CREATE TABLE public.role_has_permissions (
     permission_id int8 NOT NULL,
     role_id int8 NOT NULL,
@@ -338,6 +428,9 @@ CREATE TABLE public.role_has_permissions (
     CONSTRAINT role_has_permissions_role_id_foreign FOREIGN KEY (role_id) REFERENCES public.roles(id) ON DELETE CASCADE
 );
 
+```
+
+```sql
 CREATE TABLE public.townships (
     id bigserial NOT NULL,
     "name" varchar(255) NOT NULL,
@@ -349,6 +442,9 @@ CREATE TABLE public.townships (
     CONSTRAINT townships_district_id_foreign FOREIGN KEY (district_id) REFERENCES public.districts(id) ON DELETE CASCADE
 );
 
+```
+
+```sql
 CREATE TABLE public.weekly_schedules (
     id bigserial NOT NULL,
     week_start_date date NOT NULL,
@@ -374,6 +470,9 @@ CREATE TABLE public.weekly_schedules (
         NULL
 );
 
+```
+
+```sql
 CREATE TABLE public.intraday_activities (
     id bigserial NOT NULL,
     weekly_schedule_id int8 NOT NULL,
@@ -395,45 +494,9 @@ CREATE INDEX intraday_activities_activity_date_index ON public.intraday_activiti
 
 CREATE INDEX intraday_activities_weekly_schedule_id_index ON public.intraday_activities USING btree (weekly_schedule_id);
 
-CREATE TABLE public.org_units (
-    id bigserial NOT NULL,
-    code varchar(255) NOT NULL,
-    "name" varchar(255) NOT NULL,
-    description text NULL,
-    parent_id int8 NULL,
-    "level" int4 DEFAULT 1 NOT NULL,
-    "path" varchar(255) NULL,
-    is_active bool DEFAULT true NOT NULL,
-    metadata json NULL,
-    created_at timestamp(0) NULL,
-    updated_at timestamp(0) NULL,
-    directorate_id int8 NULL,
-    department_id int8 NULL,
-    position_id int8 NULL,
-    CONSTRAINT org_units_code_unique UNIQUE (code),
-    CONSTRAINT org_units_pkey PRIMARY KEY (id),
-    CONSTRAINT org_units_department_id_foreign FOREIGN KEY (department_id) REFERENCES public.departments(id) ON DELETE
-    SET
-        NULL,
-        CONSTRAINT org_units_directorate_id_foreign FOREIGN KEY (directorate_id) REFERENCES public.directorates(id) ON DELETE
-    SET
-        NULL,
-        CONSTRAINT org_units_parent_id_foreign FOREIGN KEY (parent_id) REFERENCES public.org_units(id) ON DELETE RESTRICT,
-        CONSTRAINT org_units_position_id_foreign FOREIGN KEY (position_id) REFERENCES public.positions(id) ON DELETE
-    SET
-        NULL
-);
+```
 
-CREATE INDEX org_units_department_id_index ON public.org_units USING btree (department_id);
-
-CREATE INDEX org_units_directorate_id_index ON public.org_units USING btree (directorate_id);
-
-CREATE INDEX org_units_level_index ON public.org_units USING btree (level);
-
-CREATE INDEX org_units_parent_id_index ON public.org_units USING btree (parent_id);
-
-CREATE INDEX org_units_position_id_index ON public.org_units USING btree (position_id);
-
+```sql
 CREATE TABLE public.employees (
     id bigserial NOT NULL,
     employee_number varchar(255) NULL,
@@ -449,7 +512,6 @@ CREATE TABLE public.employees (
     mobile_phone varchar(255) NULL,
     address text NULL,
     township_id int8 NOT NULL,
-    org_unit_id int8 NULL,
     department_id int8 NULL,
     parent_id int8 NULL,
     position_id int8 NOT NULL,
@@ -487,9 +549,6 @@ CREATE TABLE public.employees (
         CONSTRAINT employees_parent_id_foreign FOREIGN KEY (parent_id) REFERENCES public.employees(id) ON DELETE
     SET
         NULL,
-        CONSTRAINT employees_org_unit_id_foreign FOREIGN KEY (org_unit_id) REFERENCES public.org_units(id) ON DELETE
-    SET
-        NULL,
         CONSTRAINT employees_position_id_foreign FOREIGN KEY (position_id) REFERENCES public.positions(id) ON DELETE RESTRICT,
         CONSTRAINT employees_township_id_foreign FOREIGN KEY (township_id) REFERENCES public.townships(id) ON DELETE RESTRICT,
         CONSTRAINT employees_user_id_foreign FOREIGN KEY (user_id) REFERENCES public.users(id) ON DELETE CASCADE
@@ -497,6 +556,9 @@ CREATE TABLE public.employees (
 
 CREATE INDEX employees_parent_id_index ON public.employees USING btree (parent_id);
 
+```
+
+```sql
 CREATE TABLE public.intraday_activity_assignments (
     id bigserial NOT NULL,
     intraday_activity_id int8 NOT NULL,
@@ -509,6 +571,9 @@ CREATE TABLE public.intraday_activity_assignments (
     CONSTRAINT intraday_activity_assignments_intraday_activity_id_foreign FOREIGN KEY (intraday_activity_id) REFERENCES public.intraday_activities(id) ON DELETE CASCADE
 );
 
+```
+
+```sql
 CREATE TABLE public.leave_requests (
     id bigserial NOT NULL,
     employee_id int8 NOT NULL,
@@ -547,6 +612,9 @@ CREATE INDEX leave_requests_employee_id_index ON public.leave_requests USING btr
 
 CREATE INDEX leave_requests_status_index ON public.leave_requests USING btree (status);
 
+```
+
+```sql
 CREATE TABLE public.team_members (
     id bigserial NOT NULL,
     team_id int8 NOT NULL,
@@ -572,6 +640,9 @@ CREATE INDEX team_members_employee_id_index ON public.team_members USING btree (
 
 CREATE INDEX team_members_team_id_index ON public.team_members USING btree (team_id);
 
+```
+
+```sql
 CREATE TABLE public.weekly_schedule_assignments (
     id bigserial NOT NULL,
     weekly_schedule_id int8 NOT NULL,
@@ -595,6 +666,9 @@ CREATE INDEX weekly_schedule_assignments_employee_id_index ON public.weekly_sche
 
 CREATE INDEX weekly_schedule_assignments_weekly_schedule_id_index ON public.weekly_schedule_assignments USING btree (weekly_schedule_id);
 
+```
+
+```sql
 CREATE TABLE public.attendance_incidents (
     id bigserial NOT NULL,
     employee_id int8 NOT NULL,
@@ -614,6 +688,9 @@ CREATE TABLE public.attendance_incidents (
 
 CREATE INDEX attendance_incidents_employee_id_incident_date_index ON public.attendance_incidents USING btree (employee_id, incident_date);
 
+```
+
+```sql
 CREATE TABLE public.employee_break_overrides (
     id bigserial NOT NULL,
     employee_id int8 NOT NULL,
@@ -634,6 +711,9 @@ CREATE TABLE public.employee_break_overrides (
 
 CREATE INDEX employee_break_overrides_employee_id_index ON public.employee_break_overrides USING btree (employee_id);
 
+```
+
+```sql
 CREATE TABLE public.employee_dependents (
     id bigserial NOT NULL,
     employee_id int8 NOT NULL,
@@ -648,6 +728,9 @@ CREATE TABLE public.employee_dependents (
     CONSTRAINT employee_dependents_employee_id_foreign FOREIGN KEY (employee_id) REFERENCES public.employees(id) ON DELETE CASCADE
 );
 
+```
+
+```sql
 CREATE TABLE public.employee_disabilities (
     id bigserial NOT NULL,
     employee_id int8 NOT NULL,
@@ -663,6 +746,9 @@ CREATE TABLE public.employee_disabilities (
     CONSTRAINT employee_disabilities_employee_id_foreign FOREIGN KEY (employee_id) REFERENCES public.employees(id) ON DELETE CASCADE
 );
 
+```
+
+```sql
 CREATE TABLE public.employee_diseases (
     id bigserial NOT NULL,
     employee_id int8 NOT NULL,
@@ -678,6 +764,9 @@ CREATE TABLE public.employee_diseases (
     CONSTRAINT employee_diseases_employee_id_foreign FOREIGN KEY (employee_id) REFERENCES public.employees(id) ON DELETE CASCADE
 );
 
+```
+
+```sql
 CREATE TABLE public.employee_positions (
     id bigserial NOT NULL,
     employee_id int8 NOT NULL,
@@ -714,6 +803,9 @@ WHERE
         AND (end_date IS NULL)
     );
 
+```
+
+```sql
 CREATE TABLE public.leave_request_approvals (
     id bigserial NOT NULL,
     leave_request_id int8 NOT NULL,
@@ -740,6 +832,9 @@ CREATE TABLE public.leave_request_approvals (
 
 CREATE INDEX leave_request_approvals_leave_request_id_index ON public.leave_request_approvals USING btree (leave_request_id);
 
+```
+
+```sql
 CREATE TABLE public.shift_swap_requests (
     id bigserial NOT NULL,
     requester_id int8 NOT NULL,
@@ -777,6 +872,9 @@ CREATE INDEX shift_swap_requests_swap_date_index ON public.shift_swap_requests U
 
 CREATE INDEX shift_swap_requests_target_id_index ON public.shift_swap_requests USING btree (target_id);
 
+```
+
+```sql
 CREATE TABLE public.shift_swap_approvals (
     id bigserial NOT NULL,
     shift_swap_request_id int8 NOT NULL,
@@ -894,3 +992,5 @@ ADD
 -- ALTER TABLE public.employees DROP COLUMN IF EXISTS supervisor_id;
 -- ALTER TABLE public.employees DROP COLUMN IF EXISTS coordinator_id;
 -- ALTER TABLE public.employees DROP COLUMN IF EXISTS manager_id;
+
+```
