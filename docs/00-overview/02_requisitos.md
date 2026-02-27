@@ -51,78 +51,115 @@ Este documento define de forma completa, explícita y estructurada los requisito
 
 ### 3.3 Gestión de Roles y Permisos
 
-| ID    | Descripción                                                                | Prioridad |
-| ----- | -------------------------------------------------------------------------- | --------- |
-| RF-10 | El sistema define roles jerárquicos con nivel numérico (`hierarchy_level`) | Alta      |
-| RF-11 | El sistema asigna permisos atómicos a roles mediante tabla pivote          | Alta      |
-| RF-12 | El sistema valida permisos antes de ejecutar cualquier acción sensible     | Alta      |
-| RF-13 | Las Policies de Laravel controlan el acceso a nivel de entidad             | Alta      |
+| ID    | Descripción                                                                             | Prioridad |
+| ----- | --------------------------------------------------------------------------------------- | --------- |
+| RF-10 | El sistema define roles jerárquicos: Operador(1) -> Supervisor(2) -> Coordinador(3)     | Alta      |
+| RF-11 | El sistema asigna permisos atómicos a roles mediante tabla pivote                       | Alta      |
+| RF-12 | El sistema valida permisos y alcance por `team_id` antes de ejecutar acciones sensibles | Alta      |
+| RF-13 | Las Policies de Laravel controlan el acceso a nivel de entidad                          | Alta      |
 
 ### 3.4 Gestión de Empleados
 
-| ID    | Descripción                                                                                    | Prioridad |
-| ----- | ---------------------------------------------------------------------------------------------- | --------- |
-| RF-14 | El sistema permite registrar empleados mediante carga inicial CSV                              | Alta      |
-| RF-15 | El sistema permite editar información laboral: cargo, equipo, estado                           | Alta      |
-| RF-16 | El sistema permite definir jerarquía organizacional recursiva (jefe inmediato por `parent_id`) | Alta      |
-| RF-17 | El sistema permite cambiar el estado laboral (activo, suspendido, retirado)                    | Alta      |
-| RF-18 | El sistema permite buscar empleados por nombre, código, equipo y cargo                         | Media     |
+| ID    | Descripción                                                                                                                   | Prioridad |
+| ----- | ----------------------------------------------------------------------------------------------------------------------------- | --------- |
+| RF-14 | El sistema permite registrar empleados mediante carga inicial CSV                                                             | Alta      |
+| RF-15 | El sistema permite editar información laboral: cargo, equipo, estado                                                          | Alta      |
+| RF-16 | El sistema define jerarquía plana por equipo: Operadores y Supervisores (Operador II) reportan al Coordinador vía `parent_id` | Alta      |
+| RF-17 | El sistema permite cambiar el estado laboral (activo, suspendido, retirado)                                                   | Alta      |
+| RF-18 | El sistema permite buscar empleados por nombre, código, equipo y cargo                                                        | Media     |
 
 ### 3.5 Catálogos del Sistema
 
 | ID    | Descripción                                                     | Prioridad |
 | ----- | --------------------------------------------------------------- | --------- |
-| RF-19 | El sistema administra el catálogo de cargos (`positions`)       | Media     |
-| RF-20 | El sistema administra el catálogo de equipos (`teams`)          | Media     |
-| RF-21 | El sistema administra tipos de excepciones (`exception_types`)  | Media     |
-| RF-22 | El sistema administra estados laborales (`employment_statuses`) | Media     |
+| RF-19 | El sistema administra Direcciones (`directorates`)              | Media     |
+| RF-20 | El sistema administra Departamentos (`departments`)             | Media     |
+| RF-21 | El sistema administra el catálogo de cargos (`positions`)       | Media     |
+| RF-22 | El sistema administra el catálogo de equipos (`teams`)          | Media     |
+| RF-23 | El sistema administra tipos de excepciones (`exception_types`)  | Media     |
+| RF-24 | El sistema administra estados laborales (`employment_statuses`) | Media     |
 
 ### 3.6 Gestión de Horarios
 
-| ID    | Descripción                                                                                            | Prioridad |
-| ----- | ------------------------------------------------------------------------------------------------------ | --------- |
-| RF-23 | El sistema permite definir plantillas de horarios base (`schedules`)                                   | Alta      |
-| RF-24 | El sistema permite asignar horarios de forma masiva por equipo                                         | Alta      |
-| RF-25 | El sistema permite personalizar horarios individuales (`employee_schedules`)                           | Alta      |
-| RF-26 | El sistema mantiene historial completo de asignaciones (`start_date` / `end_date`)                     | Alta      |
-| RF-27 | El sistema calcula el horario efectivo diario resolviendo prioridades: excepción > individual > equipo | Alta      |
-| RF-28 | El sistema valida solapamientos de horarios antes de guardar                                           | Alta      |
+| ID    | Descripción                                                                                  | Prioridad |
+| ----- | -------------------------------------------------------------------------------------------- | --------- |
+| RF-25 | El sistema permite definir turnos base reutilizables (`schedules`)                           | Alta      |
+| RF-26 | Solo el rol WFM puede crear planificación semanal (`weekly_schedules`) por `week_start_date` | Alta      |
+| RF-27 | Solo el rol WFM puede asignar turnos por semana (`weekly_schedule_assignments`)              | Alta      |
+| RF-28 | El sistema guarda planificación semanal en estado inicial `draft`                            | Alta      |
+| RF-29 | Solo el rol WFM puede publicar planificación semanal cambiando a estado `published`          | Alta      |
+| RF-30 | El operador solo visualiza su horario cuando la semana está `published`                      | Alta      |
+| RF-31 | El sistema valida solapamientos de asignaciones semanales antes de guardar                   | Alta      |
 
 ### 3.7 Excepciones Laborales
 
 | ID    | Descripción                                                                           | Prioridad |
 | ----- | ------------------------------------------------------------------------------------- | --------- |
-| RF-29 | El sistema permite registrar excepciones: vacaciones, incapacidades, licencias        | Alta      |
-| RF-30 | El sistema soporta excepciones de rango de fechas (`start_date` / `end_date`)         | Alta      |
-| RF-31 | Las excepciones marcadas con `affects_schedule=true` sobrescriben el horario efectivo | Alta      |
-| RF-32 | El sistema valida conflictos entre excepciones existentes antes de guardar            | Alta      |
+| RF-32 | El sistema permite registrar excepciones: vacaciones, incapacidades, licencias        | Alta      |
+| RF-33 | El sistema soporta excepciones de rango de fechas (`start_date` / `end_date`)         | Alta      |
+| RF-34 | Las excepciones marcadas con `affects_schedule=true` sobrescriben el horario efectivo | Alta      |
+| RF-35 | El sistema valida conflictos entre excepciones existentes antes de guardar            | Alta      |
 
 ### 3.8 Permisos y Licencias
 
-| ID    | Descripción                                                                              | Prioridad |
-| ----- | ---------------------------------------------------------------------------------------- | --------- |
-| RF-33 | El sistema permite solicitar permisos parciales (rango horario) o totales (día completo) | Alta      |
-| RF-34 | El sistema soporta flujos de aprobación jerárquicos configurables                        | Alta      |
-| RF-35 | El sistema permite rechazar solicitudes con justificación textual obligatoria            | Alta      |
-| RF-36 | El sistema notifica al solicitante el resultado de su solicitud                          | Media     |
+| ID    | Descripción                                                                                           | Prioridad |
+| ----- | ----------------------------------------------------------------------------------------------------- | --------- |
+| RF-36 | El sistema permite solicitar permisos parciales (rango horario) o totales (día completo)              | Alta      |
+| RF-37 | El sistema aplica flujo de aprobación de un solo paso: aprobación del Coordinador del mismo `team_id` | Alta      |
+| RF-38 | El sistema permite rechazar solicitudes con justificación textual obligatoria                         | Alta      |
+| RF-39 | El sistema notifica al solicitante el resultado de su solicitud                                       | Media     |
 
 ### 3.9 Cambios de Turno
 
 | ID    | Descripción                                                                       | Prioridad |
 | ----- | --------------------------------------------------------------------------------- | --------- |
-| RF-37 | El sistema permite solicitar cambio de turno entre dos empleados del mismo rol    | Alta      |
-| RF-38 | El sistema valida compatibilidad de horarios entre los dos empleados involucrados | Alta      |
-| RF-39 | El empleado destino debe aceptar explícitamente el cambio propuesto               | Alta      |
-| RF-40 | El cambio requiere aprobación jerárquica posterior a la aceptación mutua          | Alta      |
+| RF-40 | El sistema permite solicitar cambio de turno entre dos empleados del mismo rol    | Alta      |
+| RF-41 | El sistema valida compatibilidad de horarios entre los dos empleados involucrados | Alta      |
+| RF-42 | El empleado destino debe aceptar explícitamente el cambio propuesto               | Alta      |
+| RF-43 | El cambio requiere aprobación final única del Coordinador del mismo `team_id`     | Alta      |
 
 ### 3.10 Asistencia
 
-| ID    | Descripción                                                                         | Prioridad |
-| ----- | ----------------------------------------------------------------------------------- | --------- |
-| RF-41 | El sistema permite registrar asistencia o inasistencia manualmente por supervisor   | Alta      |
-| RF-42 | El sistema permite editar registros de asistencia con razón auditada                | Alta      |
-| RF-43 | El sistema permite justificar inasistencias asociándolas a una excepción            | Alta      |
-| RF-44 | El sistema permite consultar historial de asistencia por empleado y rango de fechas | Media     |
+| ID    | Descripción                                                                                     | Prioridad |
+| ----- | ----------------------------------------------------------------------------------------------- | --------- |
+| RF-44 | El sistema permite al Coordinador registrar incidencias de asistencia en `attendance_incidents` | Alta      |
+| RF-45 | El sistema permite al Coordinador editar incidencias con trazabilidad auditada                  | Alta      |
+| RF-46 | El sistema permite vincular incidencias a excepciones o permisos aprobados                      | Alta      |
+| RF-47 | El sistema permite consultar historial de asistencia por empleado y rango de fechas             | Media     |
+
+### 3.11 Planificación Intradía
+
+| ID    | Descripción                                                                                                 | Prioridad |
+| ----- | ----------------------------------------------------------------------------------------------------------- | --------- |
+| RF-48 | El sistema permite crear actividades intradía (`intraday_activities`) con tipo, horario y cupo máximo       | Alta      |
+| RF-49 | El sistema permite asignar operadores a actividades (`intraday_activity_assignments`) sin exceder capacidad | Alta      |
+| RF-50 | El operador puede visualizar sus actividades intradía junto con su turno general                            | Alta      |
+
+### 3.12 Gestión de Descansos
+
+| ID    | Descripción                                                                                             | Prioridad |
+| ----- | ------------------------------------------------------------------------------------------------------- | --------- |
+| RF-51 | El sistema permite definir plantillas de descanso (`break_templates`)                                   | Alta      |
+| RF-52 | Solo WFM puede vincular una plantilla de descanso a una asignación semanal específica                   | Alta      |
+| RF-53 | El Coordinador puede sobrescribir temporalmente descansos por fecha usando `employee_break_overrides`   | Alta      |
+| RF-54 | El sistema valida que la sobrescritura no solape actividades críticas ni reglas de negocio de cobertura | Alta      |
+
+### 3.13 Información Médica y Dependientes
+
+| ID    | Descripción                                                                               | Prioridad |
+| ----- | ----------------------------------------------------------------------------------------- | --------- |
+| RF-55 | El sistema permite registrar y mantener dependientes del empleado (`employee_dependents`) | Alta      |
+| RF-56 | El sistema permite registrar discapacidades del empleado (`employee_disabilities`)        | Alta      |
+| RF-57 | El sistema permite registrar enfermedades crónicas del empleado (`employee_diseases`)     | Alta      |
+| RF-58 | El operador puede consultar su información médica y familiar en modo lectura              | Media     |
+
+### 3.14 Operación de Piso (Supervisor / Operador II)
+
+| ID    | Descripción                                                                                                   | Prioridad |
+| ----- | ------------------------------------------------------------------------------------------------------------- | --------- |
+| RF-59 | El Supervisor (Operador II) conserva capacidades de Operador y no participa en aprobaciones de Workflow       | Alta      |
+| RF-60 | El Supervisor dispone de permisos de solo lectura del equipo (ej. `team_schedules.view`) para soporte técnico | Alta      |
+| RF-61 | El Supervisor puede consultar disponibilidad intradía del equipo sin modificar planificación ni aprobaciones  | Alta      |
 
 ---
 
