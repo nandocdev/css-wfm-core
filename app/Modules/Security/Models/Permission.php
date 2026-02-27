@@ -6,7 +6,14 @@ namespace App\Modules\Security\Models;
 
 use Spatie\Permission\Models\Permission as SpatiePermission;
 
-class Permission extends SpatiePermission
-{
-    protected $guarded = [];
+class Permission extends SpatiePermission {
+    protected $guard_name = 'web';
+
+    /**
+     * @var list<string>
+     */
+    protected $fillable = [
+        'name',
+        'guard_name',
+    ];
 }
