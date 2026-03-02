@@ -104,10 +104,10 @@
 - [x] **Módulo: Workflow (Cambios de Turno)**
     - [x] Flujo completo: Solicitud -> Aceptación -> Aprobación (UC-OP-08, 09, UC-COOR-04).
 
-- [ ] **Módulo: Intelligence & Persistence**
-    - [ ] **ScheduleResolverService:** Lógica de prioridad (Excepción > Intradía > Semanal) (UC-INT-07, 08).
-    - [ ] **WFM Advanced:** Forzar aprobaciones institucionales y ajustes masivos (UC-WFM-06, UC-DIR-04, UC-JEF-06).
-    - [ ] Mantenimiento: Herramientas de reprocesamiento (UC-ADM-08) y prevención de borrado (UC-INT-09).
+- [x] **Módulo: Intelligence & Persistence**
+    - [x] **ScheduleResolverService:** Lógica de prioridad (Excepción > Intradía > Semanal) (UC-INT-07, 08).
+    - [x] **WFM Advanced:** Forzar aprobaciones institucionales y ajustes masivos (UC-WFM-06, UC-DIR-04, UC-JEF-06).
+    - [x] Mantenimiento: Herramientas de reprocesamiento (UC-ADM-08) y prevención de borrado (UC-INT-09).
 
 ---
 
