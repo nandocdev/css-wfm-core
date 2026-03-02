@@ -15,6 +15,8 @@ planning.schedule.current.view_own,web
 planning.schedule.history.view_own,web
 planning.schedule.exceptions.view_own,web
 planning.my_day.view_own,web
+intelligence.operations.view,web
+intelligence.schedule.resolve,web
 workflow.leave.request.create,web
 workflow.leave.request.view_own,web
 workflow.shift_swap.request.create,web
@@ -58,6 +60,7 @@ operations.global.view,web
 kpis.global.view,web
 workflow.leave.approval.review_direction,web
 workflow.exceptions.institutional.authorize,web
+workflow.exceptions.force_approve,web
 security.users.view,web
 security.users.create,web
 security.users.update,web
@@ -70,3 +73,4 @@ employee.import.execute,web
 employee.medical.manage,web
 audit.logs.view,web
 system.reprocess.execute,web
+system.reprocess.information,web
