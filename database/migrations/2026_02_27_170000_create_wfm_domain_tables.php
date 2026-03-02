@@ -376,15 +376,17 @@ return new class extends Migration {
             $table->index('shift_swap_request_id');
         });
 
-        DB::statement("ALTER TABLE employees ADD CONSTRAINT employees_gender_check CHECK (gender IS NULL OR gender IN ('male', 'female', 'other'))");
-        DB::statement("ALTER TABLE weekly_schedules ADD CONSTRAINT weekly_schedules_status_check CHECK (status IN ('draft', 'published'))");
-        DB::statement("ALTER TABLE leave_requests ADD CONSTRAINT leave_requests_type_check CHECK (type IN ('partial', 'full'))");
-        DB::statement("ALTER TABLE leave_requests ADD CONSTRAINT leave_requests_status_check CHECK (status IN ('pending', 'approved', 'rejected', 'cancelled'))");
-        DB::statement("ALTER TABLE leave_request_approvals ADD CONSTRAINT leave_request_approvals_action_check CHECK (action IN ('approved', 'rejected'))");
-        DB::statement("ALTER TABLE shift_swap_requests ADD CONSTRAINT shift_swap_requests_status_check CHECK (status IN ('pending', 'accepted', 'rejected', 'approved', 'cancelled'))");
-        DB::statement("ALTER TABLE shift_swap_approvals ADD CONSTRAINT shift_swap_approvals_action_check CHECK (action IN ('approved', 'rejected'))");
-        DB::statement("ALTER TABLE team_members ADD CONSTRAINT team_members_dates_valid CHECK (end_date IS NULL OR end_date >= start_date)");
-        DB::statement("ALTER TABLE employee_positions ADD CONSTRAINT employee_positions_dates_valid CHECK (end_date IS NULL OR end_date >= start_date)");
+        if (DB::getDriverName() !== 'sqlite') {
+            DB::statement("ALTER TABLE employees ADD CONSTRAINT employees_gender_check CHECK (gender IS NULL OR gender IN ('male', 'female', 'other'))");
+            DB::statement("ALTER TABLE weekly_schedules ADD CONSTRAINT weekly_schedules_status_check CHECK (status IN ('draft', 'published'))");
+            DB::statement("ALTER TABLE leave_requests ADD CONSTRAINT leave_requests_type_check CHECK (type IN ('partial', 'full'))");
+            DB::statement("ALTER TABLE leave_requests ADD CONSTRAINT leave_requests_status_check CHECK (status IN ('pending', 'approved', 'rejected', 'cancelled'))");
+            DB::statement("ALTER TABLE leave_request_approvals ADD CONSTRAINT leave_request_approvals_action_check CHECK (action IN ('approved', 'rejected'))");
+            DB::statement("ALTER TABLE shift_swap_requests ADD CONSTRAINT shift_swap_requests_status_check CHECK (status IN ('pending', 'accepted', 'rejected', 'approved', 'cancelled'))");
+            DB::statement("ALTER TABLE shift_swap_approvals ADD CONSTRAINT shift_swap_approvals_action_check CHECK (action IN ('approved', 'rejected'))");
+            DB::statement("ALTER TABLE team_members ADD CONSTRAINT team_members_dates_valid CHECK (end_date IS NULL OR end_date >= start_date)");
+            DB::statement("ALTER TABLE employee_positions ADD CONSTRAINT employee_positions_dates_valid CHECK (end_date IS NULL OR end_date >= start_date)");
+        }
         DB::statement("CREATE UNIQUE INDEX employee_positions_unique_primary_active_idx ON employee_positions (employee_id) WHERE is_primary = true AND is_active = true AND end_date IS NULL");
     }
 
