@@ -60,10 +60,10 @@
 
 **Objetivo:** Herramientas para que el Analista WFM defina la oferta de horarios.
 
-- [~] **Módulo: Schedule Engine**
-    - [ ] CRUD de Horarios con cálculo automático de jornada (UC-WFM-01, 02).
-    - [~] Plantillas de Descansos (`break_templates`) y su asignación (UC-WFM-12).
-    - [ ] **Configuraciones WFM:** Definición de tolerancias y umbrales (UC-WFM-03).
+- [x] **Módulo: Schedule Engine**
+    - [x] CRUD de Horarios con cálculo automático de jornada (UC-WFM-01, 02).
+    - [x] Plantillas de Descansos (`break_templates`) y su asignación (UC-WFM-12).
+    - [x] **Configuraciones WFM:** Definición de tolerancias y umbrales (UC-WFM-03).
 
 - [~] **Módulo: Planning (Fase 1 - Semanal)**
     - [ ] Motores de asignación masiva de turnos base (UC-WFM-04).
