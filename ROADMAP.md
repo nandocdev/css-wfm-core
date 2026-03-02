@@ -115,15 +115,15 @@
 
 **Objetivo:** Dashboards ejecutivos, reportes avanzados y cierre de proyecto.
 
-- [ ] **Módulo: Analytics & Monitoring**
-    - [ ] Dashboard de Director/Jefe: KPIs de ausentismo y cobertura global (UC-DIR-01, 02).
-    - [ ] Reportería consolidada por Jefatura para toma de decisiones (UC-JEF-05).
-    - [ ] Reportes de cumplimiento para Coordinadores (UC-COOR-08).
-    - [ ] Vistas de monitoreo "Solo Lectura" para Supervisores/Coordinadores (UC-SUP-01, 02, UC-COOR-09).
-    - [ ] Motor de Exportación (CSV/Excel) para WFM (UC-WFM-07, 08).
+- [x] **Módulo: Analytics & Monitoring**
+    - [x] Dashboard de Director/Jefe: KPIs de ausentismo y cobertura global (UC-DIR-01, 02).
+    - [x] Reportería consolidada por Jefatura para toma de decisiones (UC-JEF-05).
+    - [x] Reportes de cumplimiento para Coordinadores (UC-COOR-08).
+    - [x] Vistas de monitoreo "Solo Lectura" para Supervisores/Coordinadores (UC-SUP-01, 02, UC-COOR-09).
+    - [x] Motor de Exportación (CSV/Excel) para WFM (UC-WFM-07, 08).
 
 - [ ] **Calidad y Entrega**
-    - [ ] Pulido de UI con AdminLTE y componentes Blade consistentes.
+    - [ ] Pulido de UI con TailAdmin y componentes Blade consistentes.
     - [ ] Pruebas unitarias/integración de flujos críticos de aprobación.
     - [ ] Documentación técnica y despliegue final.
 
