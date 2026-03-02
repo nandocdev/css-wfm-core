@@ -32,6 +32,10 @@ class WeeklySchedule extends Model {
         return $this->hasMany(WeeklyScheduleAssignment::class);
     }
 
+    public function intradayActivities(): HasMany {
+        return $this->hasMany(IntradayActivity::class);
+    }
+
     public function publishedBy(): BelongsTo {
         return $this->belongsTo(User::class, 'published_by');
     }
