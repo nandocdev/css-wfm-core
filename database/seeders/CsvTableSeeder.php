@@ -5,6 +5,7 @@ namespace Database\Seeders;
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\File;
+use Illuminate\Support\Facades\Schema;
 
 class CsvTableSeeder extends Seeder
 {
@@ -71,6 +72,8 @@ class CsvTableSeeder extends Seeder
 
     public function run(): void
     {
+        Schema::disableForeignKeyConstraints();
+
         // Seeding order matters due to foreign key constraints
         $this->seedFromCsv('directorates', 'directorates.csv');
         $this->seedFromCsv('disability_types', 'disability_types.csv');
@@ -90,5 +93,7 @@ class CsvTableSeeder extends Seeder
         $this->seedFromCsv('roles', 'roles.csv');
         $this->seedFromCsv('users', 'users.csv');
         $this->seedFromCsv('employees', 'employees.csv');
+
+        Schema::enableForeignKeyConstraints();
     }
 }
