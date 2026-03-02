@@ -1,0 +1,3 @@
+name,email,password
+"Admin User","admin@example.com","password"
+"Manager User","manager@example.com","password"

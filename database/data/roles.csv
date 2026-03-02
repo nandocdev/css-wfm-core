@@ -1,0 +1,5 @@
+name,guard_name,code,hierarchy_level
+"Administrator","web","admin",1
+"Manager","web","manager",2
+"Supervisor","web","supervisor",3
+"Agent","web","agent",4

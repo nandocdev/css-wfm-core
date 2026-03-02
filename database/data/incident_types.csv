@@ -1,0 +1,5 @@
+code,name,color,requires_justification,affects_availability,is_active
+"VAC","Vacation","green",1,1,1
+"SICK","Sick Leave","red",1,1,1
+"PERM","Permission","blue",1,1,1
+"LATE","Tardiness","orange",0,1,1

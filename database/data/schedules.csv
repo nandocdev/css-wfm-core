@@ -1,0 +1,4 @@
+name,start_time,end_time,lunch_minutes,break_minutes,total_minutes,is_active
+"Normal 8-5","08:00:00","17:00:00",60,15,480,1
+"Afternoon 2-11","14:00:00","23:00:00",60,15,480,1
+"Night 10-7","22:00:00","07:00:00",60,15,480,1

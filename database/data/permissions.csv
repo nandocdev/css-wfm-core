@@ -1,0 +1,7 @@
+name,guard_name
+"view-employees","web"
+"create-employees","web"
+"edit-employees","web"
+"delete-employees","web"
+"view-schedules","web"
+"manage-schedules","web"

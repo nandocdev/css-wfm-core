@@ -1,0 +1,4 @@
+name,description,code,is_active
+"Permanent","Description for Permanent","perm",1
+"Contractor","Description for Contractor","cont",1
+"Part-time","Description for Part-time","pt",1
