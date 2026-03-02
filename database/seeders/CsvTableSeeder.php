@@ -7,19 +7,17 @@ use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\File;
 use Illuminate\Support\Facades\Schema;
 
-class CsvTableSeeder extends Seeder
-{
+class CsvTableSeeder extends Seeder {
     /**
      * Seed a table from a CSV file.
-     * 
+     *
      * @param string $table The table name
      * @param string $filename The CSV filename in database/data/
      * @param string $delimiter CSV delimiter
      */
-    public function seedFromCsv(string $table, string $filename, string $delimiter = ',')
-    {
+    public function seedFromCsv(string $table, string $filename, string $delimiter = ',') {
         $path = database_path('data/' . $filename);
-        
+
         if (!File::exists($path)) {
             $this->command->warn("File not found: $path");
             return;
@@ -27,7 +25,7 @@ class CsvTableSeeder extends Seeder
 
         $file = fopen($path, 'r');
         $header = fgetcsv($file, 0, $delimiter);
-        
+
         if (!$header) {
             $this->command->error("Empty or invalid CSV: $filename");
             fclose($file);
@@ -42,12 +40,15 @@ class CsvTableSeeder extends Seeder
             }
 
             $data = array_combine($header, $row);
-            
+
             // Clean up values
             foreach ($data as $key => $value) {
-                if ($value === '1' || strtolower($value) === 'true') $data[$key] = true;
-                elseif ($value === '0' || strtolower($value) === 'false') $data[$key] = false;
-                elseif ($value === '') $data[$key] = null;
+                if ($value === '1' || strtolower($value) === 'true')
+                    $data[$key] = true;
+                elseif ($value === '0' || strtolower($value) === 'false')
+                    $data[$key] = false;
+                elseif ($value === '')
+                    $data[$key] = null;
             }
 
             // Determine if timestamps are needed
@@ -70,8 +71,7 @@ class CsvTableSeeder extends Seeder
         $this->command->info("Seeded $count records into $table from $filename");
     }
 
-    public function run(): void
-    {
+    public function run(): void {
         Schema::disableForeignKeyConstraints();
 
         // Seeding order matters due to foreign key constraints
@@ -87,7 +87,7 @@ class CsvTableSeeder extends Seeder
         $this->seedFromCsv('positions', 'positions.csv'); // Depends on departments
         $this->seedFromCsv('incident_types', 'incident_types.csv');
         $this->seedFromCsv('schedules', 'schedules.csv');
-        
+
         // Identity & Access
         $this->seedFromCsv('permissions', 'permissions.csv');
         $this->seedFromCsv('roles', 'roles.csv');
