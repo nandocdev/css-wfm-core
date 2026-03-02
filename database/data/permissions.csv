@@ -17,6 +17,11 @@ planning.schedule.exceptions.view_own,web
 planning.my_day.view_own,web
 intelligence.operations.view,web
 intelligence.schedule.resolve,web
+analytics.dashboard.executive.view,web
+analytics.reporting.management.view,web
+analytics.reporting.coordinator.view,web
+analytics.monitoring.readonly.view,web
+analytics.export.execute,web
 workflow.leave.request.create,web
 workflow.leave.request.view_own,web
 workflow.shift_swap.request.create,web
