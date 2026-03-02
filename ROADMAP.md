@@ -50,9 +50,9 @@
     - [x] **Carga Masiva:** `ImportEmployeesAction` con validaciones de integridad (UC-ADM-07).
     - [x] Dashboard "Mi Perfil" para Operadores (UC-OP-01).
 
-- [~] **Módulo: Team Management**
-    - [~] Gestión de equipos (`teams`) y miembros.
-    - [ ] Asignación de Coordinadores a equipos únicos (UC-COOR-01).
+- [x] **Módulo: Team Management**
+    - [x] Gestión de equipos (`teams`) y miembros.
+    - [x] Asignación de Coordinadores a equipos únicos (UC-COOR-01).
 
 ---
 
