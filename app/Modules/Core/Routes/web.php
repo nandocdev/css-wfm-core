@@ -5,7 +5,7 @@ declare(strict_types=1);
 use App\Modules\Core\Http\Controllers\NotificationCenterController;
 use Illuminate\Support\Facades\Route;
 
-Route::middleware(['web', 'auth'])
+Route::middleware(['web', 'auth', 'employee.association'])
     ->name('core.')
     ->group(function (): void {
         Route::get('/notifications', [NotificationCenterController::class, 'index'])->name('notifications.index');

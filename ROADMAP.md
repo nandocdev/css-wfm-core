@@ -31,7 +31,7 @@
         - [x] UC-ADM-03 Activar / desactivar usuario.
         - [x] UC-ADM-04 Asignar rol de sistema.
         - [x] UC-ADM-05 Gestionar permisos.
-    - [ ] **Middleware de Jerarquía:** Validar usuarios sin empleado asociado (UC-INT-10).
+    - [x] **Middleware de Jerarquía:** Validar usuarios sin empleado asociado (UC-INT-10).
 
 ---
 
