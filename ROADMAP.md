@@ -15,7 +15,7 @@
     - [x] Estructura modular `app/Modules/*`.
     - [x] Catálogos base: `provinces`, `districts`, `townships`, `employment_statuses`, `incident_types`.
     - [x] **Auditoría Inmutable:** Modelo `AuditLog` y Observer Global para modelos críticos (UC-INT-05, UC-ADM-09).
-    - [~] **Sistema de Notificaciones:** Infraestructura para alertas vía Mail/Database (UC-COM-06, UC-INT-06).
+    - [x] **Sistema de Notificaciones:** Infraestructura para alertas vía Mail/Database (UC-COM-06, UC-INT-06).
 
 - [~] **Módulo: Security & Administration**
     - [x] Migración de `users` y roles/permisos (Spatie).
