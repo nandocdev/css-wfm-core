@@ -10,6 +10,7 @@ return [
     App\Modules\Schedule\Providers\ModuleServiceProvider::class,
     App\Modules\Planning\Providers\ModuleServiceProvider::class,
     App\Modules\Intelligence\Providers\ModuleServiceProvider::class,
+    App\Modules\Analytics\Providers\ModuleServiceProvider::class,
     App\Modules\Attendance\Providers\ModuleServiceProvider::class,
     App\Modules\Workflow\Providers\ModuleServiceProvider::class,
 ];

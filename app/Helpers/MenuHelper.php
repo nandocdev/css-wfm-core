@@ -38,6 +38,11 @@ class MenuHelper {
                         'name' => 'Intelligence',
                         'path' => '/intelligence/operations',
                     ],
+                    [
+                        'icon' => 'charts',
+                        'name' => 'Analytics',
+                        'path' => '/analytics/monitoring',
+                    ],
                 ]
             ],
             [
