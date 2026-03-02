@@ -51,6 +51,9 @@ class CsvTableSeeder extends Seeder
 
             // Determine if timestamps are needed
             $insertData = $data;
+            if (isset($insertData['password']) && !empty($insertData['password'])) {
+                $insertData['password'] = bcrypt($insertData['password']);
+            }
             if (!isset($data['created_at'])) {
                 $insertData['created_at'] = now();
             }
@@ -86,5 +89,6 @@ class CsvTableSeeder extends Seeder
         $this->seedFromCsv('permissions', 'permissions.csv');
         $this->seedFromCsv('roles', 'roles.csv');
         $this->seedFromCsv('users', 'users.csv');
+        $this->seedFromCsv('employees', 'employees.csv');
     }
 }

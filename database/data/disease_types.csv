@@ -1,3 +1,37 @@
-name,description
-"Disease A","Description for Disease A"
-"Disease B","Description for Disease B"
+id,name
+1,Alergia Penicilina
+2,Anemia Falciforme
+3,Asma
+4,Cadera
+5,"Desgaste de vertebras degenerativa, Migraña, Trombofilia"
+6,Diabetes
+7,"Diabetes, Hipertension (mareos dolor de oido)"
+8,"Disco Herniado, Lumbalgia Crónica, Asma, Hipertensión Arterial, Cervicalgia Crónica, Cefalé, Articulaciones dolor crónico."
+9,Hiertensión
+10,"Hipertensio, Cervicalgia Cronica, (en espera de diagnostico: Disco Herniado Lumbar) (Fuertes dolores en la cadera y nuca y en algunas ocaciones se le dificulta mover las manos)"
+11,Hipertensio. Fuerte dolor de oidos (provoca mareos)
+12,Hipertension
+13,"Hipertension, operado de Colon, Convulsion (de por vida medicado por ese padecimiento)"
+14,Hipertensión
+15,"Hipertensión , Diabetes"
+16,Hipertensión Arterial
+17,"Hipertensión Arterial, Diabétes mellitus, Enfermedad Renal Crónica Estadio V."
+18,"Hipertensión, Enfermedad renal"
+19,"Hipertensión, diabetes, síndrome depresivo ansioso"
+20,"Hipertesion, Succion Lumbar (espalda)"
+21,"Leucemia Meloide Crónica, Hipertensión arterial, Viceral"
+22,Lumbar
+23,Migraña Crónica
+24,"Migraña Crónica, Diabetes, Hipertensión, Reumatismo, Osteopenía, Cervical y lumbar"
+25,"Neuralgía del Nervio Trigémino Izquierda, Cervicalgía, Hernia de Discos lumbares con afección radicular."
+26,Neuropatía muscular Periférica
+27,Presion alta
+28,"Presion alta, Diabetes, Discopatia Degenerativa, Hipotiroidismo, Ovarios Poliquisticos, Fibromatosis Quisticas"
+29,Presion arterial
+30,Presion arterial cronica y diabetes
+31,Problemas con las rodillas
+32,Rinitis Crónica
+33,"Rinitis Crónica,Sinositis Crónica, Asma."
+34,Rodilla
+35,Trombosis Pulmonar
+36,Vertigo

@@ -1,3 +1,9 @@
-name,description
-"Disability A","Description for Disability A"
-"Disability B","Description for Disability B"
+id,name
+1,"Anemia Falciforme, Prótiesis en Cadera y Hombro izquierdo"
+2,Auditiva
+3,Disautonomia
+4,"Leucemia Meloide Crónica, Presión alta, Visceral"
+5,Motora y Visual
+6,Neuropatía Muscular Periférica
+7,Pierna Izquierda tobillo y perone
+8,vista izquierda

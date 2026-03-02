@@ -1,4 +1,4 @@
-name,description,code,is_active
-"Permanent","Description for Permanent","perm",1
-"Contractor","Description for Contractor","cont",1
-"Part-time","Description for Part-time","pt",1
+id,name,description,code,is_active
+1,"Permanent","Empleado permanente","perm",1
+2,"Contractor","Contratista","cont",1
+3,"Part-time","Tiempo parcial","pt",1

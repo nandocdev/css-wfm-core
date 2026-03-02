@@ -1,0 +1,105 @@
+id,employee_number,user_id,username,first_name,last_name,email,birth_date,gender,blood_type,address,township_id,department_id,position_id,employment_status_id,hire_date,salary,is_active,is_manager
+1,86401800005,1,aespino,Alexa,Espino,aespino@css.gob.pa,1974-08-03,female,,El Cangrejo,1,1,1,1,1996-06-26,4500.0,1,1
+2,86401000125,2,ericgonzalezv,Eric,Gonzalez,ericgonzalezv@css.gob.pa,1972-08-03,male,A+,El Prado,519,2,2,1,2012-06-15,1800.0,1,1
+3,86401000625,3,ralgandona,Roberto,Algandona,ralgandona@css.gob.pa,1966-04-18,male,O+,Bethania,1,3,3,1,2014-11-06,1800.0,1,1
+4,86401000136,4,khubner,Karl,Hubner,khubner@css.gob.pa,1963-05-04,male,A+,Villa Lucre,355,4,4,1,2013-06-17,1800.0,1,1
+5,82101096462,5,mcastillo,Maria,Castillo,mcastillo@css.gob.pa,1968-12-30,female,A+,Las Americas,1,5,5,1,1992-11-09,2070.08,1,0
+6,86401000620,6,lcortez,Lorena,Cortes,lcortez@css.gob.pa,1977-03-11,female,O+,"Bda. Los Pinos, Calle los Guayacanes, Lote D-1",1,4,6,1,2002-08-21,2271.0,1,0
+7,86401000636,7,dafuentes,Daniel,Fuentes,dafuentes@css.gob.pa,1979-11-26,male,O+,Urb. Bosque Dorado,1,2,7,1,2020-01-01,1691.0,1,0
+8,86401000619,8,glguerra,Glenis,Guerra,glguerra@css.gob.pa,1979-08-30,female,B-,"Repsrto, Altos de caceres 2",1,4,6,1,2008-10-16,2271.0,1,0
+9,86401000367,9,vquiros,Valerie,Quiros,vquiros@css.gob.pa,1982-05-21,female,B+,PH Lagos del Norte,1,2,7,1,2012-07-01,1981.0,1,0
+10,86401000627,10,dreina,Daira,Reina,dreina@css.gob.pa,1979-07-03,female,O+,"Campo Limberth, Juan Díaz",333,2,7,1,2014-02-03,1981.0,1,0
+11,86401000604,11,antejada,Antonia,Tejada,antejada@css.gob.pa,1977-05-20,female,O+,Lidice,1,4,6,1,2009-10-01,1836.0,1,0
+12,86401000366,12,vtejada,Victor,Tejada,vtejada@css.gob.pa,1976-09-22,male,A+,Calle los Sauces,346,2,7,1,2011-10-03,1981.0,1,0
+13,86401000116,13,dixguerrero,Dixiana,Guerrero,dixguerrero@css.gob.pa,1979-03-23,female,O+,Alcalde Díaz - Praderas de San Lorenzo,1,6,8,1,2012-09-03,1981.0,1,0
+14,86401000115,14,loguevara,Lorena,Guevara,loguevara@css.gob.pa,1977-02-13,female,O+,"Los Andes #2, PH Bella Natura, modulo 2, Torre 2, apto 14C",354,6,8,1,2012-09-03,1981.0,1,0
+15,86401000617,15,yrahman,Yaremi,Rahman,yrahman@css.gob.pa,1973-09-12,female,O+,"brisas del golf, cl13, casa B2-30",1,6,8,1,2007-07-27,2271.0,1,0
+16,86401000575,16,hfranco,Hernan,Franco,hfranco@css.gob.pa,1985-03-24,male,O+,CL 2da Vista Hermosa,329,6,9,1,2013-04-18,1691.0,1,0
+17,80801001248,17,marmosquera,Maria,Mosquera,marmosquera@css.gob.pa,1951-09-19,female,O+,"Ave. 5ta sur Marbella, Edificio Flamengo, apto 5D",328,6,9,1,2017-08-01,3500.0,1,0
+18,86401000118,18,ferncastillo,Fernando,Castillo,ferncastillo@css.gob.pa,1990-06-21,male,O+,Barriada Palo Alto,1,3,10,1,2012-12-17,1856.0,1,0
+19,86401000135,19,frchong,Francisco,Chong,frchong@css.gob.pa,1982-10-12,male,A+,Praderas del Norte,1,3,10,1,2013-04-17,1856.0,1,0
+20,86401000122,20,milagonzalez,Milagro,Gonzalez,milagonzalez@css.gob.pa,1977-01-17,female,AB-,Rio Abajo - PH Sta. 19 Road,1,3,10,1,2012-12-17,1856.0,1,0
+21,86401000124,21,jaquiros,Javier,Quiros,jaquiros@css.gob.pa,1983-10-24,male,O+,Las Arboledas,1,3,10,1,2012-12-17,1856.0,1,0
+22,86401000400,22,wsabin,Willey,Sabin,wsabin@css.gob.pa,1986-07-07,male,O+,PH Lagos del Norte,1,3,10,1,2007-08-27,1711.0,1,0
+23,86401000615,23,jemoran,Jesús,Morán,jemoran@css.gob.pa,1987-05-24,male,A+,Nuevo Hipodromo,333,3,10,1,2014-12-16,1856.0,1,0
+24,86401000169,24,maryherrera,Maryory,Herrera,maryherrera@css.gob.pa,1985-12-23,female,O+,Los Andes 2 - El Lago,1,4,11,1,2012-04-16,1262.0,1,0
+25,86401000121,25,kchan,Katherine,Chan,kchan@css.gob.pa,1988-04-15,female,O+,"Barrio la Herradura, Cl Bejuco.",518,6,12,1,2014-08-04,1836.0,1,0
+26,86401000497,26,aarchibold,Antonio,Archibold,aarchibold@css.gob.pa,1980-06-30,male,A+,"Pradera Azul, barriada Verona, cl6ta, casa 295",343,6,13,1,2013-04-02,1474.0,1,0
+27,86401000109,27,anbethancourt,Ana,Bethancourt,anbethancourt@css.gob.pa,1976-09-24,female,O+,"Residencial Valle Dorado Cl J, Casa 12-25",1,6,13,1,2007-08-27,1599.0,1,0
+28,86401000361,28,marjlopez,Marjorie,Lopez,marjlopez@css.gob.pa,1989-01-03,female,O+,Torre 1 apto 501,1,4,14,1,2015-02-12,1474.0,1,0
+29,86401000350,29,jmina,Jose,Mina,jmina@css.gob.pa,1986-04-04,male,O+,Las Arboledas,1,2,15,1,2011-12-01,1474.0,1,0
+30,86401000459,30,neriortega,Neribel,Ortega,neriortega@css.gob.pa,1989-12-09,female,O+,"Jardines de la Mitra, ave. A , casa 178",526,2,15,1,2013-04-01,1349.0,1,0
+31,86401000474,31,jospinzon,Josselyn,Pinzón,jospinzon@css.gob.pa,1987-04-04,female,O+,Ciudad Santa Fe,343,2,15,1,2013-04-01,1349.0,1,0
+32,86401000571,32,marielrodriguez,Marielis,Rodríguez,marielrodriguez@css.gob.pa,1991-12-17,female,O+,"Montelimar, Calle Antioquia, cas I-86",1,4,14,1,2013-04-01,1349.0,1,0
+33,86401000275,33,nivaldes,Nilsa,Valdés,nivaldes@css.gob.pa,1983-02-18,female,O+,"Las lomas, calle margarita, casa 139",1,4,14,1,2012-12-03,1474.0,1,0
+34,86401000111,34,marvillarreal,Marichel,Villarreal,marvillarreal@css.gob.pa,1987-09-19,female,O+,Villa Grecia Prdera del Norte,1,2,15,1,2007-08-27,1724.0,1,0
+35,86401000546,35,zestrada,Zuyitza,Estrada,zestrada@css.gob.pa,1994-04-28,female,O+,Barriada Brisas del Campo,1,2,16,1,2014-02-03,1262.0,1,0
+36,86401000183,36,#VALOR!,Eduardo,Pineda,,1977-07-01,male,A-,Curundú,1,5,17,1,2012-11-01,807.0,1,0
+37,86401000491,37,vdelrio,Vivian,De Rio,vdelrio@css.gob.pa,1991-03-30,female,O+,Cerro Batea,353,5,18,1,2019-12-27,1500.0,1,0
+38,86401000564,38,kbennett,Khiara,Bennett,kbennett@css.gob.pa,1989-04-15,female,O+,"Bda. Los Nogales 1, Casa 123, Calle 5ta",1,2,19,1,2013-05-01,1262.0,1,0
+39,86401000461,39,aigraell,Aidil,Graell,aigraell@css.gob.pa,1990-10-12,female,O+,Guadalupe,518,2,19,1,2014-08-04,1262.0,1,0
+40,86401000414,40,meljaramillo,Melissa,Jaramillo,meljaramillo@css.gob.pa,1994-01-24,female,A+,"Santa Monica calle 11, casa 174",342,2,19,1,2020-09-21,1032.0,1,0
+41,86401000295,41,mnoval,Marlen,Noval,mnoval@css.gob.pa,1982-11-15,female,O+,Progreso 3,527,2,19,1,2013-02-15,1262.0,1,0
+42,86401000651,42,avelez,Anyuri,Velez,avelez@css.gob.pa,1985-10-19,female,O+,Edif. La Fuente,1,4,20,1,2014-04-21,1147.0,1,0
+43,86401000933,43,jearrocha,Jesus,Arrocha,jearrocha@css.gob.pa,1996-12-28,male,A+,"San Jose,Ojo de Agua",1,4,20,1,2019-05-06,1032.0,1,0
+44,83116000438,44,xaviles,Xoshil,Aviles,xaviles@css.gob.pa,2002-04-19,female,O+,Alcalde Díaz Casa 411,344,2,19,1,2021-07-23,917.0,1,0
+45,86401000528,45,jballis,Jenifer,Ballis,jballis@css.gob.pa,1980-08-30,female,O+,Pseo del Norte/Brisas del Golf,1,2,19,1,2021-10-05,917.0,1,0
+46,86401000599,46,danitbatista,Danitza,Batista,danitbatista@css.gob.pa,1977-08-19,female,O+,"Alcalde Díaz , calle la pintada casa 458",344,2,19,1,2013-12-03,1262.0,1,0
+47,86401000486,47,jbrugiatti,Julio,Brugiatti,jbrugiatti@css.gob.pa,1989-05-25,female,O+,Calle 1er Llano Bonito,1,2,19,1,2013-04-01,1262.0,1,0
+48,86401000536,48,glchanis,Gloria,Chanis,glchanis@css.gob.pa,1963-06-03,female,O-,Señorial del Rio,1,4,20,1,2013-04-16,1262.0,1,0
+49,86401000519,49,scoke,Shanthal,Coke,scoke@css.gob.pa,1988-08-20,female,B+,El Lago - Emperador,1,2,19,1,2014-02-03,1262.0,1,0
+50,86401000335,50,cacollado,Carlos,Collado,cacollado@css.gob.pa,1988-03-23,male,A+,"La Toscana Real calle Sorolla, casa 228",1,2,19,1,2015-04-17,1147.0,1,0
+51,86401000410,51,gcoronado,Giovanni,Coronado,gcoronado@css.gob.pa,1976-01-14,female,O+,"Los Nogales 2, Calle 21B",1,2,19,1,2013-11-06,1262.0,1,0
+52,86401000254,52,julcorrea,Julieta,Correa,julcorrea@css.gob.pa,1968-06-26,female,B+,"calle, C casa E35",329,4,20,1,2014-04-01,1262.0,1,0
+53,86401000548,53,vedelacruz,Veronica,De La Cruz,vedelacruz@css.gob.pa,1980-01-13,female,A+,"Barrio Vega, calle 11 Sur, casa 3473",512,4,20,1,2013-04-17,1262.0,1,0
+54,86401000255,54,kdominguez,Karol,Dominguez,kdominguez@css.gob.pa,1990-04-30,female,O+,"Paraiso, calle principal",1,4,20,1,2015-07-31,1147.0,1,0
+55,86401000558,55,kdurango,Katherina,Durango,kdurango@css.gob.pa,1989-09-15,female,O+,Colina de Las Cumbres,1,2,19,1,2013-05-01,1262.0,1,0
+56,86401000493,56,yetienne,Yvette,Etienne,yetienne@css.gob.pa,1971-03-26,female,A+,"Villa Gabriela, final Cincuentenario",332,2,19,1,2013-04-02,1262.0,1,0
+57,86401000674,57,gaflores,Garla,Flores,gaflores@css.gob.pa,1994-07-07,female,O-,Los Andes N. 2,1,2,19,1,2014-02-19,1262.0,1,0
+58,86401000316,58,inggomez,Ingrid,Gomez,inggomez@css.gob.pa,1984-08-04,female,A+,"Barriada el Prado casa 213, calle principal",519,2,19,1,2015-03-16,1262.0,1,0
+59,86401000565,59,girgonzalez,Gira,Gonzalez,girgonzalez@css.gob.pa,1980-09-20,female,B+,Bda. Altos del Tecal,1,4,20,1,2014-08-04,1262.0,1,0
+60,86401000608,60,jingonzalez,Jinneth,González,jingonzalez@css.gob.pa,1990-09-19,female,A+,"Nuevo Arraiján , Calle 12, casa 2465",1,4,20,1,2014-09-01,1262.0,1,0
+61,82002000071,61,noregonzalez,Norelvys,Gonzalez,noregonzalez@css.gob.pa,1995-07-07,female,A+,"Barriada Altos de Araguaney, calle 2B, Casa 73C",1,4,20,1,2021-07-30,917.0,1,0
+62,86401000253,62,yamilgonzalez,Yamilka,González,yamilgonzalez@css.gob.pa,1983-09-09,female,O+,"Tocumen, Barriada Santa Lucia",341,2,19,1,2012-12-03,1262.0,1,0
+63,86401000237,63,eshernandez,Esther,Hernández,eshernandez@css.gob.pa,1976-01-19,female,O+,Quintas del Lago,1,2,19,1,2012-12-17,1262.0,1,0
+64,86401000240,64,lizisazaq,Lizbeth,Isaza,lizisazaq@css.gob.pa,1989-07-18,female,O+,"Barriada Corotu, Altos del Tecal, calle 7b , casa 362",1,2,19,1,2021-07-20,917.0,1,0
+65,86401000408,65,lijuarez,Lilia,Juárez,lijuarez@css.gob.pa,1987-01-29,female,A+,Barriada Villa massiel Casa # 12,1,4,20,1,2013-11-06,1262.0,1,0
+66,86401000448,66,nlondono,Nitzi,Londoño,nlondono@css.gob.pa,1979-06-17,female,A+,"Las Mañanitas, Barriada Parque Real, Calle Fratima, Casa C14",1,2,19,1,2013-03-06,1262.0,1,0
+67,86401000531,67,gman,Gabriela,Man,gman@css.gob.pa,1980-06-27,female,O+,Altos de San Francisco,1,2,19,1,2014-02-03,1262.0,1,0
+68,86401000235,68,lmartinez,Luis,Martínez,lmartinez@css.gob.pa,1979-12-01,female,O+,"Villa Lucre, Vista Alta, Calle Budapes",349,2,19,1,2012-12-17,1262.0,1,0
+69,86401000302,69,melmartinez,Melva,Martínez,melmartinez@css.gob.pa,1984-02-21,female,O+,Barriada Cumbre Azul,1,2,19,1,2012-12-17,1262.0,1,0
+70,86401000524,70,dmolino,David,Molino,dmolino@css.gob.pa,1991-10-13,male,O+,"San Antonio, calle Parquiaco, casa D2",1,2,19,1,2015-07-15,1147.0,1,0
+71,86401000306,71,rmontero,Ruth,Montero,rmontero@css.gob.pa,1984-02-02,female,O+,"Pedregal, Rana de Oro",334,2,19,1,2012-12-17,1262.0,1,0
+72,86401000310,72,rubmorales,Ruben,Morales,rubmorales@css.gob.pa,1986-01-24,male,A+,Entrada calle de los macias,1,4,20,1,2012-12-17,1262.0,1,0
+73,86401000432,73,vimoran,Victor,Morán,vimoran@css.gob.pa,1986-01-13,male,O+,"Residen cial Nuevo Arraiján, calle 11, casa C648",1,4,20,1,2011-09-01,1377.0,1,0
+74,82004000130,74,genemoreno,Genesis,Moreno,genemoreno@css.gob.pa,1990-11-09,female,O+,Los Andes N. 2,1,2,19,1,2021-08-04,917.0,1,0
+75,86401000252,75,lilmoreno,Lilibeth,Moreno,lilmoreno@css.gob.pa,1975-06-30,female,O+,Colinas del Sol,1,2,19,1,2012-12-03,1262.0,1,0
+76,86401000469,76,yarmunoz,Yariela,Muñoz,yarmunoz@css.gob.pa,1983-01-16,female,O+,"Santa Librada casa 620, etapa 7",1,2,19,1,2020-01-01,1262.0,1,0
+77,86401000552,77,conavarro,Cornelio,Navarro,conavarro@css.gob.pa,1965-09-23,male,O+,"Juan Diaz, calle segunda",333,2,19,1,2013-05-01,1262.0,1,0
+78,86401000676,78,ivnunez,Ivonne,Nuñez,ivnunez@css.gob.pa,1995-01-26,female,O+,Calle El Eden,1,4,20,1,2014-02-19,1262.0,1,0
+79,86401000323,79,siolivares,Sindy,Olivares,siolivares@css.gob.pa,1980-09-17,female,O+,"Altos de la Roca casa 4D, Calle 4ta",1,4,20,1,2012-12-17,1262.5,1,0
+80,86401001311,80,erphillips,Ernesto,Phillips,erphillips@css.gob.pa,1965-12-27,male,O+,"Brisas del Golf, calle 42 Este",1,2,19,1,2021-07-12,917.0,1,0
+81,86401000447,81,jpile,Joany,Pile,jpile@css.gob.pa,1990-12-17,female,O+,"Villas de Santander 1, nuevo Chorrillo",1,4,20,1,2013-03-05,1262.0,1,0
+82,86401000209,82,ypineda,Yamileth,Pineda,ypineda@css.gob.pa,1979-10-19,female,A+,"Cabra, Santa Isabel",339,2,19,1,2012-10-16,1262.0,1,0
+83,86401000314,83,vplicett,Vanessa,Plicett,vplicett@css.gob.pa,1985-06-20,female,O+,"Alcalde Díaz, calle 7ma, casa 48",344,2,19,1,2021-07-23,917.0,1,0
+84,86401000433,84,tpolo,Tatiana,Polo,tpolo@css.gob.pa,1974-05-30,female,A-,"Las Garzas, PH Montemadero, Calle 3",1,2,19,1,2013-03-18,1262.0,1,0
+85,86401000186,85,Bramirez,Batherline,Ramirez,Bramirez@css.gob.pa,1993-02-10,female,O+,Calle 16,332,4,20,1,2014-02-03,1262.0,1,0
+86,86401000655,86,arenteria,Amalia,Renteria,arenteria@css.gob.pa,1988-11-14,female,O+,barriada quintas del pacifico calle 43 casa 731,527,4,20,1,2014-04-21,1262.0,1,0
+87,86401000435,87,mereyes,Melissa,Reyes,mereyes@css.gob.pa,1982-09-10,female,O+,Villa de SANTRANDER 1,1,2,19,1,2013-03-05,1262.0,1,0
+88,86401000348,88,celirodriguez,Celidet,Rodriguez,celirodriguez@css.gob.pa,1985-09-30,female,O+,Ave. A /calle 21 /Edif. La PESE,323,2,19,1,2011-12-01,1377.0,1,0
+89,86401000482,89,gorodriguez,Gonzalo,Rodriguez,gorodriguez@css.gob.pa,1988-10-28,female,O+,Calle1er San Vicente,336,2,19,1,2014-02-03,1262.0,1,0
+90,86401000483,90,sarrodriguez,Sara,Rodríguez,sarrodriguez@css.gob.pa,1994-08-29,female,O+,"Calle Portobelo, Casa 1338",1,4,20,1,2013-04-01,1262.0,1,0
+91,86401000261,91,yulrodriguez,Yulayquis,Rodriguez,yulrodriguez@css.gob.pa,1991-10-09,female,O+,"calle Cartago, casa E-6",1,4,20,1,2014-04-01,1262.0,1,0
+92,86401000276,92,ariasanchez,Ariadna,Sánchez,ariasanchez@css.gob.pa,1991-06-11,female,O+,"Vacamonte, Altos las Huacas, calle 5ta, Casa I-121-A",487,4,20,1,2012-12-03,1262.0,1,0
+93,86401000672,93,ensandoval,Enrique,Sandoval,ensandoval@css.gob.pa,1988-04-27,male,O+,casa 209 calle 12,1,4,20,1,2014-04-01,1262.0,1,0
+94,86401000219,94,rossantamaria,Rosilene,Santamaria,rossantamaria@css.gob.pa,1989-12-19,female,O+,"24 de Dic., Pradera Azul",339,2,19,1,2015-01-02,1262.0,1,0
+95,86401000272,95,ztrejos,Zelhis,Trejos,ztrejos@css.gob.pa,1981-01-04,female,O+,Santa Librada,354,4,20,1,2012-12-03,1262.0,1,0
+96,86401000494,96,yavallejos,Yamileth,Vallejos,yavallejos@css.gob.pa,1968-01-28,female,O+,San Pedro N. 1,1,4,20,1,2013-04-01,1262.0,1,0
+97,86401000932,97,novilla,Norma,Villa,novilla@css.gob.pa,1989-04-20,female,O+,"Juan Diaz, Los Guayacanes",333,2,19,1,2019-05-15,1032.0,1,0
+98,86401000462,98,cvillaverde,Cecibel,Villaverde,cvillaverde@css.gob.pa,1989-03-03,female,O+,"La Chorrera, calle 8, ave. Kenedy",1,4,20,1,2013-04-01,1262.0,1,0
+99,86401000668,99,rolaguilar,Rolando,Aguilar,rolaguilar@css.gob.pa,1985-07-25,male,B+,"Santa Librada, Segunda etapa, casa F-28",354,4,20,1,2014-02-19,1262.0,1,0
+100,86401000301,100,cacedeno,Carolyn,Cedeño,cacedeno@css.gob.pa,1988-06-07,female,O+,"Bda. Lago Emperador, Calle 2",1,2,19,1,2012-12-17,1262.0,1,0
+101,86401000315,101,locerrud,Lorena,Cerrud,locerrud@css.gob.pa,1980-12-27,female,B-,"Villa Grecia, Praderas del Norte",1,4,20,1,2012-12-19,1262.0,1,0
+102,86401000182,102,yacastro,Yasury,Castro,yacastro@css.gob.pa,1988-01-24,female,B+,"Tocumen, Bda. Buena Vista",341,4,20,1,2012-11-01,1262.0,1,0
+103,86401000555,103,dancedeno,Daniska,Cedeño,dancedeno@css.gob.pa,1986-03-25,female,O+,"Vacamonte barriada Altos del Tecal, calle 4ta , csa 221",1,2,19,1,2013-05-01,1262.0,1,0
+104,86401000322,104,gisssanchez,Gisselle,Sanchez,gisssanchez@css.gob.pa,1984-02-05,female,O+,Santa Librada,354,4,20,1,2012-12-17,1262.0,1,0
