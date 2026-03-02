@@ -14,7 +14,7 @@
     - [~] Inicializar Laravel 12 con PHP 8.4 y PostgreSQL 16.
     - [x] Estructura modular `app/Modules/*`.
     - [x] Catálogos base: `provinces`, `districts`, `townships`, `employment_statuses`, `incident_types`.
-    - [~] **Auditoría Inmutable:** Modelo `AuditLog` y Observer Global para modelos críticos (UC-INT-05, UC-ADM-09).
+    - [x] **Auditoría Inmutable:** Modelo `AuditLog` y Observer Global para modelos críticos (UC-INT-05, UC-ADM-09).
     - [~] **Sistema de Notificaciones:** Infraestructura para alertas vía Mail/Database (UC-COM-06, UC-INT-06).
 
 - [~] **Módulo: Security & Administration**
