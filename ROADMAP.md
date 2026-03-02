@@ -39,10 +39,10 @@
 
 **Objetivo:** Modelar la jerarquía de la CSS y la ficha única del empleado.
 
-- [~] **Módulo: Organization & Corporate**
-    - [~] Estructura: `Directorate` -> `Department` -> `Position` (UC-ADM-06).
-    - [ ] **Jerarquía Dinámica:** Lógica de recursividad en `Employee` para validación de descendencia (UC-INT-04).
-    - [ ] Vistas de estructura jerárquica para roles superiores (UC-JEF-01).
+- [x] **Módulo: Organization & Corporate**
+    - [x] Estructura: `Directorate` -> `Department` -> `Position` (UC-ADM-06).
+    - [x] **Jerarquía Dinámica:** Lógica de recursividad en `Employee` para validación de descendencia (UC-INT-04).
+    - [x] Vistas de estructura jerárquica para roles superiores (UC-JEF-01).
 
 - [~] **Módulo: Employee & Welfare**
     - [~] Ficha del empleado: Datos laborales y vinculación organizacional.
