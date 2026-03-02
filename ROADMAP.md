@@ -65,11 +65,11 @@
     - [x] Plantillas de Descansos (`break_templates`) y su asignación (UC-WFM-12).
     - [x] **Configuraciones WFM:** Definición de tolerancias y umbrales (UC-WFM-03).
 
-- [~] **Módulo: Planning (Fase 1 - Semanal)**
-    - [ ] Motores de asignación masiva de turnos base (UC-WFM-04).
-    - [ ] Interfaz de grilla para WFM (estado `draft`).
-    - [ ] Flujo de publicación de planificación (UC-WFM-09).
-    - [ ] **Consumo Operativo:** Vista de "Mi Horario" (UC-OP-02), Historial (UC-OP-03) y Excepciones (UC-OP-04) para Operadores.
+- [x] **Módulo: Planning (Fase 1 - Semanal)**
+    - [x] Motores de asignación masiva de turnos base (UC-WFM-04).
+    - [x] Interfaz de grilla para WFM (estado `draft`).
+    - [x] Flujo de publicación de planificación (UC-WFM-09).
+    - [x] **Consumo Operativo:** Vista de "Mi Horario" (UC-OP-02), Historial (UC-OP-03) y Excepciones (UC-OP-04) para Operadores.
 
 ---
 
