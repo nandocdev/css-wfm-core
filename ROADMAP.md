@@ -44,11 +44,11 @@
     - [x] **Jerarquía Dinámica:** Lógica de recursividad en `Employee` para validación de descendencia (UC-INT-04).
     - [x] Vistas de estructura jerárquica para roles superiores (UC-JEF-01).
 
-- [~] **Módulo: Employee & Welfare**
-    - [~] Ficha del empleado: Datos laborales y vinculación organizacional.
-    - [~] Submódulos de Bienestar: Dependientes, discapacidades y enfermedades (UC-OP-13, UC-ADM-10).
-    - [ ] **Carga Masiva:** `ImportEmployeesAction` con validaciones de integridad (UC-ADM-07).
-    - [ ] Dashboard "Mi Perfil" para Operadores (UC-OP-01).
+- [x] **Módulo: Employee & Welfare**
+    - [x] Ficha del empleado: Datos laborales y vinculación organizacional.
+    - [x] Submódulos de Bienestar: Dependientes, discapacidades y enfermedades (UC-OP-13, UC-ADM-10).
+    - [x] **Carga Masiva:** `ImportEmployeesAction` con validaciones de integridad (UC-ADM-07).
+    - [x] Dashboard "Mi Perfil" para Operadores (UC-OP-01).
 
 - [~] **Módulo: Team Management**
     - [~] Gestión de equipos (`teams`) y miembros.
