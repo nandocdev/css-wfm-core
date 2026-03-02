@@ -5,6 +5,12 @@ declare(strict_types=1);
 namespace App\Modules\Core\Observers;
 
 use App\Modules\Core\Models\AuditLog;
+use App\Modules\Attendance\Models\AttendanceIncident;
+use App\Modules\Planning\Models\IntradayActivity;
+use App\Modules\Planning\Models\WeeklySchedule;
+use App\Modules\Planning\Models\WeeklyScheduleAssignment;
+use App\Modules\Workflow\Models\LeaveRequest;
+use App\Modules\Workflow\Models\ShiftSwapRequest;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Facades\Auth;
 
@@ -16,6 +22,18 @@ final class CriticalModelAuditObserver {
         'password',
         'remember_token',
         'token',
+    ];
+
+    /**
+     * @var array<int, class-string<Model>>
+     */
+    private array $protectedHistoricalModels = [
+        WeeklySchedule::class,
+        WeeklyScheduleAssignment::class,
+        IntradayActivity::class,
+        LeaveRequest::class,
+        ShiftSwapRequest::class,
+        AttendanceIncident::class,
     ];
 
     public function created(Model $model): void {
@@ -39,6 +57,18 @@ final class CriticalModelAuditObserver {
         }
 
         $this->writeAuditLog($model, 'updated', $this->sanitize($before), $this->sanitize($after));
+    }
+
+    public function deleting(Model $model): bool {
+        if (!$this->isProtectedHistoricalModel($model)) {
+            return true;
+        }
+
+        $this->writeAuditLog($model, 'delete_blocked', $this->snapshot($model), [
+            'reason' => 'La eliminación de históricos está bloqueada por política.',
+        ]);
+
+        return false;
     }
 
     public function deleted(Model $model): void {
@@ -105,5 +135,15 @@ final class CriticalModelAuditObserver {
         $ip = request()->ip();
 
         return is_string($ip) ? $ip : null;
+    }
+
+    private function isProtectedHistoricalModel(Model $model): bool {
+        foreach ($this->protectedHistoricalModels as $class) {
+            if ($model instanceof $class) {
+                return true;
+            }
+        }
+
+        return false;
     }
 }
