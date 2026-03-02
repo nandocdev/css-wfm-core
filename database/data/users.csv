@@ -14,6 +14,7 @@ id,name,email,password
 13,Dixiana Guerrero,dixguerrero@css.gob.pa,password
 14,Lorena Guevara,loguevara@css.gob.pa,password
 15,Yaremi Rahman,yrahman@css.gob.pa,password
+25,Katherine Chan,kchan@css.gob.pa,password
 16,Hernan Franco,hfranco@css.gob.pa,password
 17,Maria Mosquera,marmosquera@css.gob.pa,password
 18,Fernando Castillo,ferncastillo@css.gob.pa,password
@@ -23,7 +24,6 @@ id,name,email,password
 22,Willey Sabin,wsabin@css.gob.pa,password
 23,Jesús Morán,jemoran@css.gob.pa,password
 24,Maryory Herrera,maryherrera@css.gob.pa,password
-25,Katherine Chan,kchan@css.gob.pa,password
 26,Antonio Archibold,aarchibold@css.gob.pa,password
 27,Ana Bethancourt,anbethancourt@css.gob.pa,password
 28,Marjorie Lopez,marjlopez@css.gob.pa,password
@@ -34,7 +34,7 @@ id,name,email,password
 33,Nilsa Valdés,nivaldes@css.gob.pa,password
 34,Marichel Villarreal,marvillarreal@css.gob.pa,password
 35,Zuyitza Estrada,zestrada@css.gob.pa,password
-36,Eduardo Pineda,,password
+36,Eduardo Pineda,#VALOR!@css.gob.pa,password
 37,Vivian De Rio,vdelrio@css.gob.pa,password
 38,Khiara Bennett,kbennett@css.gob.pa,password
 39,Aidil Graell,aigraell@css.gob.pa,password

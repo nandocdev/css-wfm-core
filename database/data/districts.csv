@@ -2,84 +2,83 @@ id,name,province_id
 1,Bocas Del Toro,1
 2,Almirante,1
 3,Changuinola,1
-4,,2
-5,Comarca Naso Tjër Di,1
-6,Chiriquí Grande,1
-7,Aguadulce,3
-8,Antón,3
-9,La Pintada,3
-10,Natá,3
-11,Olá,3
-12,Penonomé,3
-13,Colón,4
-14,Chagres,4
-15,Donoso,4
-16,Portobelo,4
-17,Santa Isabel,4
-18,Omar Torrijos Herrera,4
-19,Alanje,5
-20,Barú,5
-21,Boquerón,5
-22,Boquete,5
-23,Bugaba,5
-24,David,5
-25,Dolega,5
-26,Gualaca,5
-27,Remedios,5
-28,Renacimiento,5
-29,San Félix,5
-30,San Lorenzo,5
-31,Tolé,5
-32,Tierras Altas,5
-33,Chepigana,6
-34,Pinogana,6
-35,Santa Fe,6
-36,Chitré,7
-37,Las Minas,7
-38,Los Pozos,7
-39,Ocú,7
-40,Parita,7
-41,Pesé,7
-42,Santa María,7
-43,Guararé,8
-44,Las Tablas,8
-45,Los Santos,8
-46,Macaracas,8
-47,Pedasí,8
-48,Pocrí,8
-49,Tonosí,8
-50,Balboa,9
-51,Chepo,9
-52,Chimán,9
-53,Panamá,9
-54,San Miguelito,9
-55,Taboga,9
-56,Atalaya,10
-57,Calobre,10
-58,Cañazas,10
-59,La Mesa,10
-60,Las Palmas,10
-61,Montijo,10
-62,Río De Jesús,10
-63,San Francisco,10
-64,Santa Fe,10
-65,Santiago,10
-66,Soná,10
-67,Mariato,10
-68,Comarca Kuna Yala,11
-69,Cémaco,12
-70,Sambú,12
-71,Besiko,13
-72,Mironó,13
-73,Müna,13
-74,Nole Duima,13
-75,Ñürüm,13
-76,Kankintú,13
-77,Kusapín,13
-78,Jirondai,13
-79,Santa Catalina O Calovébora (Bledeshia),13
-80,Arraiján,14
-81,Capira,14
-82,Chame,14
-83,La Chorrera,14
-84,San Carlos,14
+4,Comarca Naso Tjër Di,1
+5,Chiriquí Grande,1
+6,Aguadulce,2
+7,Antón,2
+8,La Pintada,2
+9,Natá,2
+10,Olá,2
+11,Penonomé,2
+12,Colón,3
+13,Chagres,3
+14,Donoso,3
+15,Portobelo,3
+16,Santa Isabel,3
+17,Omar Torrijos Herrera,3
+18,Alanje,4
+19,Barú,4
+20,Boquerón,4
+21,Boquete,4
+22,Bugaba,4
+23,David,4
+24,Dolega,4
+25,Gualaca,4
+26,Remedios,4
+27,Renacimiento,4
+28,San Félix,4
+29,San Lorenzo,4
+30,Tolé,4
+31,Tierras Altas,4
+32,Chepigana,5
+33,Pinogana,5
+34,Santa Fe,5
+35,Chitré,6
+36,Las Minas,6
+37,Los Pozos,6
+38,Ocú,6
+39,Parita,6
+40,Pesé,6
+41,Santa María,6
+42,Guararé,7
+43,Las Tablas,7
+44,Los Santos,7
+45,Macaracas,7
+46,Pedasí,7
+47,Pocrí,7
+48,Tonosí,7
+49,Balboa,8
+50,Chepo,8
+51,Chimán,8
+52,Panamá,8
+53,San Miguelito,8
+54,Taboga,8
+55,Atalaya,9
+56,Calobre,9
+57,Cañazas,9
+58,La Mesa,9
+59,Las Palmas,9
+60,Montijo,9
+61,Río De Jesús,9
+62,San Francisco,9
+63,Santa Fe,9
+64,Santiago,9
+65,Soná,9
+66,Mariato,9
+67,Comarca Kuna Yala,10
+68,Cémaco,11
+69,Sambú,11
+70,Besiko,12
+71,Mironó,12
+72,Müna,12
+73,Nole Duima,12
+74,Ñürüm,12
+75,Kankintú,12
+76,Kusapín,12
+77,Jirondai,12
+78,Santa Catalina O Calovébora (Bledeshia),12
+79,Arraiján,13
+80,Capira,13
+81,Chame,13
+82,La Chorrera,13
+83,San Carlos,13
