@@ -138,25 +138,3 @@
 > - Los casos **UC-SUP-04..UC-SUP-11** se consideran **reasignados/no vigentes** según el catálogo maestro y no generan backlog independiente.
 
 ---
-
-## Roles y Permiso
-
-Tenemos los siguientes roles:
-
-| Prefijo | Rol                                             |
-| ------- | ----------------------------------------------- |
-| UC-COM  | Casos comunes — todos los usuarios autenticados |
-| UC-OP   | Operador                                        |
-| UC-SUP  | Supervisor (Operador II)                        |
-| UC-COOR | Coordinador                                     |
-| UC-JEF  | Jefe                                            |
-| UC-WFM  | Analista Workforce                              |
-| UC-DIR  | Director                                        |
-| UC-ADM  | Administrador del Sistema                       |
-| UC-INT  | Intrínsecos del Sistema (automáticos)           |
-
-Tomando en cuenta que UC-OP y UC-SUP comparten el mismo nivel de acceso a la plataforma, pero el Supervisor tiene permisos adicionales de visualización y escalación.
-
-Basado en esto y nuestros casos de uso definidos, se asignarán permisos específicos a cada rol para garantizar el cumplimiento de las funciones y responsabilidades establecidas.
-
-EN el archivo `database/data/permissions.csv` define los permisos específicos para cada caso de uso. Realiza una revisión exhaustiva para asegurar que cada permiso esté correctamente asignado a los roles correspondientes, garantizando así la seguridad y funcionalidad del sistema según lo planeado.
