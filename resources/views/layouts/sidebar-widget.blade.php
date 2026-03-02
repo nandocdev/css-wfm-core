@@ -1,12 +1,19 @@
-<div class="mx-auto mb-10 w-full max-w-60 rounded-2xl bg-gray-50 px-4 py-5 text-center dark:bg-white/[0.03]">
-    <h3 class="mb-2 font-semibold text-gray-900 dark:text-white">
-        #1 Tailwind CSS Dashboard
-    </h3>
-    <p class="mb-4 text-gray-500 text-theme-sm dark:text-gray-400">
-        Leading Tailwind CSS Admin Template with 500+ UI Component and Pages.
-    </p>
-    <a href="https://tailadmin.com/pricing" target="_blank" rel="nofollow"
-        class="flex items-center justify-center p-3 font-medium text-white rounded-lg bg-brand-500 text-theme-sm hover:bg-brand-600">
-        Purchase Plan
-    </a>
+<div class="mt-auto px-6 py-4 border-t border-gray-100 dark:border-gray-800">
+    <div x-show="$store.sidebar.isExpanded || $store.sidebar.isHovered || $store.sidebar.isMobileOpen" 
+         x-transition:enter="transition ease-out duration-200"
+         x-transition:enter-start="opacity-0"
+         x-transition:enter-end="opacity-100"
+         class="text-center">
+        <p class="text-xs text-gray-500 dark:text-gray-400 font-medium">
+            Contact Center &copy; {{ date('Y') }}
+        </p>
+        <p class="mt-1 text-[10px] text-gray-400 dark:text-gray-500">
+            v1.0.0 &bull; WorkForce Core
+        </p>
+    </div>
+    
+    <div x-show="!$store.sidebar.isExpanded && !$store.sidebar.isHovered && !$store.sidebar.isMobileOpen"
+         class="text-center opacity-40">
+        <span class="text-[10px] font-bold text-gray-400">WFM</span>
+    </div>
 </div>

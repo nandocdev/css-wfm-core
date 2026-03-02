@@ -217,8 +217,8 @@
             </div>
         </nav>
 
-        <!-- Sidebar Widget -->
-        <div x-data x-show="$store.sidebar.isExpanded || $store.sidebar.isHovered || $store.sidebar.isMobileOpen" x-transition class="mt-auto">
+        <!-- Sidebar Widget (Mini Footer) -->
+        <div class="mt-auto">
             @include('layouts.sidebar-widget')
         </div>
 
