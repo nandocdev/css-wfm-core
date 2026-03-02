@@ -35,4 +35,8 @@ class AttendanceIncident extends Model {
     public function incidentType(): BelongsTo {
         return $this->belongsTo(IncidentType::class);
     }
+
+    public function recordedBy(): BelongsTo {
+        return $this->belongsTo(Employee::class, 'recorded_by');
+    }
 }
