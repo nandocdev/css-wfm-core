@@ -101,8 +101,8 @@
     - [x] Creación de excepciones directas por Coordinador/WFM (UC-COOR-06, UC-WFM-05).
     - [x] **Motor de conflictos de negocio:** Resolver solapamientos lógicos entre permisos, excepciones e incidencias (UC-INT-03).
 
-- [~] **Módulo: Workflow (Cambios de Turno)**
-    - [ ] Flujo completo: Solicitud -> Aceptación -> Aprobación (UC-OP-08, 09, UC-COOR-04).
+- [x] **Módulo: Workflow (Cambios de Turno)**
+    - [x] Flujo completo: Solicitud -> Aceptación -> Aprobación (UC-OP-08, 09, UC-COOR-04).
 
 - [ ] **Módulo: Intelligence & Persistence**
     - [ ] **ScheduleResolverService:** Lógica de prioridad (Excepción > Intradía > Semanal) (UC-INT-07, 08).
