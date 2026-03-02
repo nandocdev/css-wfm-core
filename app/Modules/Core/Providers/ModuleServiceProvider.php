@@ -5,7 +5,9 @@ declare(strict_types=1);
 namespace App\Modules\Core\Providers;
 
 use App\Contracts\Core\CoreModuleContract;
+use App\Contracts\Core\NotificationDispatcherContract;
 use App\Modules\Core\Actions\CoreModuleAction;
+use App\Modules\Core\Actions\DispatchSystemNotificationAction;
 use App\Modules\Attendance\Models\AttendanceIncident;
 use App\Modules\Core\Models\IncidentType;
 use App\Modules\Core\Observers\CriticalModelAuditObserver;
@@ -32,6 +34,7 @@ use Illuminate\Support\ServiceProvider;
 final class ModuleServiceProvider extends ServiceProvider {
     public function register(): void {
         $this->app->bind(CoreModuleContract::class, CoreModuleAction::class);
+        $this->app->bind(NotificationDispatcherContract::class, DispatchSystemNotificationAction::class);
     }
 
     public function boot(): void {
