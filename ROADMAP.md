@@ -77,10 +77,10 @@
 
 **Objetivo:** Micro-gestión del tiempo real y control de asistencia.
 
-- [~] **Módulo: Planning (Fase 2 - Intradía)**
-    - [ ] Gestión de Actividades Intradía: Capacitaciones, Coaching, Reuniones (UC-WFM-10, 11).
-    - [ ] Timeline "Mi Día" para Operadores (UC-OP-12).
-    - [ ] **Gestión de Pausas:** Sobrescritura de descansos por el Coordinador (UC-COOR-07).
+- [x] **Módulo: Planning (Fase 2 - Intradía)**
+    - [x] Gestión de Actividades Intradía: Capacitaciones, Coaching, Reuniones (UC-WFM-10, 11).
+    - [x] Timeline "Mi Día" para Operadores (UC-OP-12).
+    - [x] **Gestión de Pausas:** Sobrescritura de descansos por el Coordinador (UC-COOR-07).
 
 - [~] **Módulo: Attendance & Incidents**
     - [ ] Registro de incidencias de asistencia por Coordinador (UC-COOR-02).
