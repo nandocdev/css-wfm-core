@@ -93,13 +93,13 @@
 
 **Objetivo:** Resolucion de conflictos y flujos de aprobación multinivel.
 
-- [~] **Módulo: Workflow (Permisos y Excepciones)**
-    - [ ] Solicitudes de Permiso (Total/Parcial) con prevención de solapamiento (UC-OP-05, UC-OP-06, UC-OP-07, UC-INT-02).
-    - [ ] **Bandeja Administrativa del Equipo:** Vista consolidada para el Coordinador (UC-COOR-05).
-    - [ ] Aprobaciones multinivel (Coordinador -> Jefe -> Director) según tipo/duración (UC-COOR-03, UC-JEF-02 al 04, UC-DIR-03).
-    - [ ] **Reglas de aprobación:** Validar coordinador directo y flujo de un solo paso (UC-INT-01, UC-INT-11).
-    - [ ] Creación de excepciones directas por Coordinador/WFM (UC-COOR-06, UC-WFM-05).
-    - [ ] **Motor de conflictos de negocio:** Resolver solapamientos lógicos entre permisos, excepciones e incidencias (UC-INT-03).
+- [x] **Módulo: Workflow (Permisos y Excepciones)**
+    - [x] Solicitudes de Permiso (Total/Parcial) con prevención de solapamiento (UC-OP-05, UC-OP-06, UC-OP-07, UC-INT-02).
+    - [x] **Bandeja Administrativa del Equipo:** Vista consolidada para el Coordinador (UC-COOR-05).
+    - [x] Aprobaciones multinivel (Coordinador -> Jefe -> Director) según tipo/duración (UC-COOR-03, UC-JEF-02 al 04, UC-DIR-03).
+    - [x] **Reglas de aprobación:** Validar coordinador directo y flujo de un solo paso (UC-INT-01, UC-INT-11).
+    - [x] Creación de excepciones directas por Coordinador/WFM (UC-COOR-06, UC-WFM-05).
+    - [x] **Motor de conflictos de negocio:** Resolver solapamientos lógicos entre permisos, excepciones e incidencias (UC-INT-03).
 
 - [~] **Módulo: Workflow (Cambios de Turno)**
     - [ ] Flujo completo: Solicitud -> Aceptación -> Aprobación (UC-OP-08, 09, UC-COOR-04).
