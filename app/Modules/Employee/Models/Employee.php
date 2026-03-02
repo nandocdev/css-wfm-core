@@ -9,11 +9,13 @@ use App\Modules\Core\Models\Township;
 use App\Modules\Organization\Models\Department;
 use App\Modules\Organization\Models\Position;
 use App\Modules\Security\Models\User;
+use App\Modules\Team\Models\Team;
 use App\Modules\Team\Models\TeamMember;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Database\Eloquent\Relations\HasMany;
+use Illuminate\Database\Eloquent\Relations\HasOne;
 
 class Employee extends Model {
     use HasFactory;
@@ -82,5 +84,9 @@ class Employee extends Model {
 
     public function teamMemberships(): HasMany {
         return $this->hasMany(TeamMember::class);
+    }
+
+    public function managedTeam(): HasOne {
+        return $this->hasOne(Team::class, 'coordinator_employee_id');
     }
 }
