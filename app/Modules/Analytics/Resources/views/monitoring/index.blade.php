@@ -81,8 +81,20 @@
             <x-common.component-card title="Reportería consolidada por Jefatura" desc="UC-JEF-05: indicadores por departamento para toma de decisiones.">
                 <div class="mb-3 flex flex-wrap gap-2">
                     @if ($canExport)
-                        <a href="{{ route('analytics.monitoring.export', ['report_type' => 'management', 'format' => 'csv', 'start_date' => request('start_date', $startDate), 'end_date' => request('end_date', $endDate)]) }}" class="inline-flex rounded-lg border border-gray-300 px-3 py-2 text-xs dark:border-gray-700">Exportar CSV</a>
-                        <a href="{{ route('analytics.monitoring.export', ['report_type' => 'management', 'format' => 'excel', 'start_date' => request('start_date', $startDate), 'end_date' => request('end_date', $endDate)]) }}" class="inline-flex rounded-lg border border-gray-300 px-3 py-2 text-xs dark:border-gray-700">Exportar Excel</a>
+                        <form method="GET" action="{{ route('analytics.monitoring.export') }}" class="inline-flex">
+                            <input type="hidden" name="report_type" value="management" />
+                            <input type="hidden" name="format" value="csv" />
+                            <input type="hidden" name="start_date" value="{{ request('start_date', $startDate) }}" />
+                            <input type="hidden" name="end_date" value="{{ request('end_date', $endDate) }}" />
+                            <x-ui.button type="submit">Exportar CSV</x-ui.button>
+                        </form>
+                        <form method="GET" action="{{ route('analytics.monitoring.export') }}" class="inline-flex">
+                            <input type="hidden" name="report_type" value="management" />
+                            <input type="hidden" name="format" value="excel" />
+                            <input type="hidden" name="start_date" value="{{ request('start_date', $startDate) }}" />
+                            <input type="hidden" name="end_date" value="{{ request('end_date', $endDate) }}" />
+                            <x-ui.button type="submit">Exportar Excel</x-ui.button>
+                        </form>
                     @endif
                 </div>
                 <div class="overflow-x-auto">
@@ -122,8 +134,20 @@
             <x-common.component-card title="Reporte de cumplimiento por Coordinación" desc="UC-COOR-08: cumplimiento operativo por equipo.">
                 <div class="mb-3 flex flex-wrap gap-2">
                     @if ($canExport)
-                        <a href="{{ route('analytics.monitoring.export', ['report_type' => 'coordinator', 'format' => 'csv', 'start_date' => request('start_date', $startDate), 'end_date' => request('end_date', $endDate)]) }}" class="inline-flex rounded-lg border border-gray-300 px-3 py-2 text-xs dark:border-gray-700">Exportar CSV</a>
-                        <a href="{{ route('analytics.monitoring.export', ['report_type' => 'coordinator', 'format' => 'excel', 'start_date' => request('start_date', $startDate), 'end_date' => request('end_date', $endDate)]) }}" class="inline-flex rounded-lg border border-gray-300 px-3 py-2 text-xs dark:border-gray-700">Exportar Excel</a>
+                        <form method="GET" action="{{ route('analytics.monitoring.export') }}" class="inline-flex">
+                            <input type="hidden" name="report_type" value="coordinator" />
+                            <input type="hidden" name="format" value="csv" />
+                            <input type="hidden" name="start_date" value="{{ request('start_date', $startDate) }}" />
+                            <input type="hidden" name="end_date" value="{{ request('end_date', $endDate) }}" />
+                            <x-ui.button type="submit">Exportar CSV</x-ui.button>
+                        </form>
+                        <form method="GET" action="{{ route('analytics.monitoring.export') }}" class="inline-flex">
+                            <input type="hidden" name="report_type" value="coordinator" />
+                            <input type="hidden" name="format" value="excel" />
+                            <input type="hidden" name="start_date" value="{{ request('start_date', $startDate) }}" />
+                            <input type="hidden" name="end_date" value="{{ request('end_date', $endDate) }}" />
+                            <x-ui.button type="submit">Exportar Excel</x-ui.button>
+                        </form>
                     @endif
                 </div>
                 <div class="overflow-x-auto">
