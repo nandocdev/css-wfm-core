@@ -9,6 +9,7 @@ use App\Modules\Employee\Models\Employee;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
+use Illuminate\Database\Eloquent\Relations\HasMany;
 
 class LeaveRequest extends Model {
     use HasFactory;
@@ -33,5 +34,9 @@ class LeaveRequest extends Model {
 
     public function incidentType(): BelongsTo {
         return $this->belongsTo(IncidentType::class);
+    }
+
+    public function approvals(): HasMany {
+        return $this->hasMany(LeaveRequestApproval::class);
     }
 }
