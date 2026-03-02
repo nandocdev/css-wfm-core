@@ -1,4 +1,7 @@
-id,name,description,is_active
-1,"Equipo Alfa","Equipo de atención telefónica general",1
-2,"Equipo Beta","Soporte avanzado",1
-3,"Backoffice","Gestión administrativa",1
+id,name,is_active
+1,Dirección Nacional de Asistencia de los Servicios al Asegurado,1
+2,DEPARTAMENTO DE TRAMITE E INFORMACION DE LOS SERVICIOS PARA LA SALUD,1
+3,DEPARTAMENTO DE CONTROL Y MONITOREO DE LOS SERVICIOS A LOS ASEGURADOS,1
+4,DEPARTAMENTO DE ASISTENCIA DE LOS SERVICIOS AL ASEGURADO Y SERVIDORES PUBLICOS,1
+5,Administración DENASA,1
+6,DEPARTAMENTO DE CALIDAD E INGENIERIA DE ASISTENCIA DE LOS SERVICIOS AL ASEGURADO,1

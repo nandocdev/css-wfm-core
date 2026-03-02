@@ -1,5 +1,8 @@
-name,guard_name,code,hierarchy_level
-"Administrator","web","admin",1
-"Manager","web","manager",2
-"Supervisor","web","supervisor",3
-"Agent","web","agent",4
+id,name,guard_name,code,hierarchy_level
+1,Operador,web,operator,1
+2,Supervisor,web,supervisor,1
+3,Coordinador,web,coordinator,2
+4,Jefe,web,chief,3
+5,WFM,web,wfm,3
+6,Director,web,director,4
+7,Admin,web,admin,5
