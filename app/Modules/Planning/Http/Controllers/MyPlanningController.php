@@ -6,6 +6,7 @@ namespace App\Modules\Planning\Http\Controllers;
 
 use App\Http\Controllers\Controller;
 use App\Modules\Planning\Actions\GetMyCurrentScheduleAction;
+use App\Modules\Planning\Actions\GetMyDayTimelineAction;
 use App\Modules\Planning\Actions\GetMyExceptionsAction;
 use App\Modules\Planning\Actions\GetMyScheduleHistoryAction;
 use App\Modules\Security\Models\User;
@@ -15,6 +16,7 @@ use Illuminate\View\View;
 final class MyPlanningController extends Controller {
     public function __construct(
         private GetMyCurrentScheduleAction $getMyCurrentScheduleAction,
+        private GetMyDayTimelineAction $getMyDayTimelineAction,
         private GetMyScheduleHistoryAction $getMyScheduleHistoryAction,
         private GetMyExceptionsAction $getMyExceptionsAction,
     ) {
@@ -40,6 +42,16 @@ final class MyPlanningController extends Controller {
         return view('planning::operator.history', [
             'history' => $history,
         ]);
+    }
+
+    public function myDay(Request $request): View {
+        /** @var User|null $user */
+        $user = $request->user();
+        abort_if($user === null, 403);
+
+        $payload = $this->getMyDayTimelineAction->execute((int) $user->id);
+
+        return view('planning::operator.my_day', $payload);
     }
 
     public function exceptions(Request $request): View {
