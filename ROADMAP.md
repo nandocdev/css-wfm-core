@@ -82,10 +82,10 @@
     - [x] Timeline "Mi Día" para Operadores (UC-OP-12).
     - [x] **Gestión de Pausas:** Sobrescritura de descansos por el Coordinador (UC-COOR-07).
 
-- [~] **Módulo: Attendance & Incidents**
-    - [ ] Registro de incidencias de asistencia por Coordinador (UC-COOR-02).
-    - [ ] Consulta de Asistencia e Historial para el Operador (UC-OP-10, 11).
-    - [ ] Pantalla de escalación operativa para Supervisores / Op II (UC-SUP-03).
+- [x] **Módulo: Attendance & Incidents**
+    - [x] Registro de incidencias de asistencia por Coordinador (UC-COOR-02).
+    - [x] Consulta de Asistencia e Historial para el Operador (UC-OP-10, 11).
+    - [x] Pantalla de escalación operativa para Supervisores / Op II (UC-SUP-03).
 
 ---
 
