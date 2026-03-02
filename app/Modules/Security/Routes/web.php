@@ -21,6 +21,9 @@ Route::middleware(['web'])
 
             Route::middleware('auth')->group(function (): void {
                 Route::post('/logout', [AuthController::class, 'logout'])->name('logout');
+                Route::get('/profile', [AuthController::class, 'showProfile'])->name('profile');
+                Route::get('/change-password', [AuthController::class, 'showChangePasswordForm'])->name('change-password.form');
+                Route::post('/change-password', [AuthController::class, 'changeOwnPassword'])->name('change-password.update');
                 Route::get('/force-password', [ForcePasswordChangeController::class, 'show'])->name('force-password.form');
                 Route::post('/force-password', [ForcePasswordChangeController::class, 'update'])->name('force-password.update');
             });

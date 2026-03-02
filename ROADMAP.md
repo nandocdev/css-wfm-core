@@ -20,7 +20,17 @@
 - [~] **Módulo: Security & Administration**
     - [x] Migración de `users` y roles/permisos (Spatie).
     - [~] Flujos de login/logout/password (UC-COM-01 al 05).
-    - [~] ABM de usuarios y gestión de permisos (UC-ADM-01 al 05).
+        - [x] UC-COM-01 Iniciar sesión.
+        - [x] UC-COM-02 Cerrar sesión.
+        - [x] UC-COM-03 Recuperar contraseña.
+        - [x] UC-COM-04 Cambiar contraseña propia.
+        - [x] UC-COM-05 Ver perfil de usuario.
+    - [x] ABM de usuarios y gestión de permisos (UC-ADM-01 al 05).
+        - [x] UC-ADM-01 Crear usuario.
+        - [x] UC-ADM-02 Editar usuario.
+        - [x] UC-ADM-03 Activar / desactivar usuario.
+        - [x] UC-ADM-04 Asignar rol de sistema.
+        - [x] UC-ADM-05 Gestionar permisos.
     - [ ] **Middleware de Jerarquía:** Validar usuarios sin empleado asociado (UC-INT-10).
 
 ---

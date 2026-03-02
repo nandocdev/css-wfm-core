@@ -5,13 +5,16 @@ declare(strict_types=1);
 namespace App\Modules\Security\Http\Controllers;
 
 use App\Http\Controllers\Controller;
+use App\Modules\Security\Actions\ChangeOwnPasswordAction;
 use App\Modules\Security\Actions\LoginAction;
 use App\Modules\Security\Actions\LogoutAction;
 use App\Modules\Security\Actions\ResetPasswordAction;
 use App\Modules\Security\Actions\SendPasswordResetLinkAction;
+use App\Modules\Security\Http\Requests\ChangeOwnPasswordRequest;
 use App\Modules\Security\Http\Requests\ForgotPasswordRequest;
 use App\Modules\Security\Http\Requests\LoginRequest;
 use App\Modules\Security\Http\Requests\ResetPasswordRequest;
+use App\Modules\Security\Models\User;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\URL;
@@ -24,6 +27,7 @@ final class AuthController extends Controller {
         private LogoutAction $logoutAction,
         private SendPasswordResetLinkAction $sendPasswordResetLinkAction,
         private ResetPasswordAction $resetPasswordAction,
+        private ChangeOwnPasswordAction $changeOwnPasswordAction,
     ) {
     }
 
@@ -76,6 +80,35 @@ final class AuthController extends Controller {
         }
 
         return redirect()->to(URL::to('/security/auth/login'))->with('status', __($this->passwordStatusKey($status)));
+    }
+
+    public function showChangePasswordForm(): View {
+        return view('security::auth.change-password');
+    }
+
+    public function changeOwnPassword(ChangeOwnPasswordRequest $request): RedirectResponse {
+        /** @var User $user */
+        $user = $request->user();
+
+        $this->changeOwnPasswordAction->execute(
+            $user,
+            (string) $request->validated('password'),
+            $request->session()->getId(),
+        );
+
+        return back()->with('status', 'Contraseña actualizada correctamente.');
+    }
+
+    public function showProfile(Request $request): View {
+        /** @var User|null $user */
+        $user = $request->user();
+
+        abort_if($user === null, 403);
+
+        return view('security::auth.profile', [
+            'user' => $user,
+            'roleNames' => $user->getRoleNames(),
+        ]);
     }
 
     private function passwordStatusKey(string $status): string {
